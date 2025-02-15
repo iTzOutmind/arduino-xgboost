@@ -183,3 +183,19 @@ Unique Values: 	['Normal' 'ST-T abnormality' 'Left Ventricular Hypertrophy']
 Column: 	Heart_Attack_Risk 
 Unique Values: 	['Low' 'Moderate' 'High']
 
+##############################################
+####### Heart Attack Risk Distribution #######
+##############################################
+
+Risikogruppe: Low 
+Anzahl der Einträge: 25024 
+Relativer Anteil: 0.50048%.
+
+Risikogruppe: Moderate 
+Anzahl der Einträge: 14904 
+Relativer Anteil: 0.29808%.
+
+Risikogruppe: High 
+Anzahl der Einträge: 10072 
+Relativer Anteil: 0.20144%.
+
