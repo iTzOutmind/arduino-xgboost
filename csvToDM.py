@@ -1,6 +1,7 @@
-import numpy as np
+# Import required libs
 import pandas as pd
 from xgboost import DMatrix, train
 
-heartattack = pd.read_csv('C:/Users/reddu/Documents/GitHub/arduino-xgboost/heart_attack_risk_dataset.csv')
+# Load dataset
+heartattack = pd.read_csv('datasets/heart_attack_risk_dataset.csv')
 
