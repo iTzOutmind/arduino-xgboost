@@ -1,0 +1,185 @@
+#################################################
+####### Summaries of numerical columns: #########
+#################################################
+
+Column: Age 
+count    50000.000000
+mean        53.398700
+std         20.799006
+min         18.000000
+25%         35.000000
+50%         53.000000
+75%         71.000000
+max         89.000000
+Name: Age, dtype: float64 
+Data Type: int64
+
+Column: Smoking 
+count    50000.000000
+mean         0.298420
+std          0.457569
+min          0.000000
+25%          0.000000
+50%          0.000000
+75%          1.000000
+max          1.000000
+Name: Smoking, dtype: float64 
+Data Type: int64
+
+Column: Alcohol_Consumption 
+count    50000.000000
+mean         0.401980
+std          0.490303
+min          0.000000
+25%          0.000000
+50%          0.000000
+75%          1.000000
+max          1.000000
+Name: Alcohol_Consumption, dtype: float64 
+Data Type: int64
+
+Column: BMI 
+count    50000.000000
+mean        27.519357
+std          7.225176
+min         15.000000
+25%         21.270000
+50%         27.540000
+75%         33.770000
+max         40.000000
+Name: BMI, dtype: float64 
+Data Type: float64
+
+Column: Diabetes 
+count    50000.000000
+mean         0.198840
+std          0.399131
+min          0.000000
+25%          0.000000
+50%          0.000000
+75%          0.000000
+max          1.000000
+Name: Diabetes, dtype: float64 
+Data Type: int64
+
+Column: Hypertension 
+count    50000.00000
+mean         0.29738
+std          0.45711
+min          0.00000
+25%          0.00000
+50%          0.00000
+75%          1.00000
+max          1.00000
+Name: Hypertension, dtype: float64 
+Data Type: int64
+
+Column: Cholesterol_Level 
+count    50000.000000
+mean       225.036444
+std         43.317373
+min        150.000000
+25%        187.300000
+50%        225.100000
+75%        262.600000
+max        300.000000
+Name: Cholesterol_Level, dtype: float64 
+Data Type: float64
+
+Column: Resting_BP 
+count    50000.000000
+mean       134.434100
+std         25.907961
+min         90.000000
+25%        112.000000
+50%        134.000000
+75%        157.000000
+max        179.000000
+Name: Resting_BP, dtype: float64 
+Data Type: int64
+
+Column: Heart_Rate 
+count    50000.000000
+mean        94.530480
+std         20.187124
+min         60.000000
+25%         77.000000
+50%         94.000000
+75%        112.000000
+max        129.000000
+Name: Heart_Rate, dtype: float64 
+Data Type: int64
+
+Column: Family_History 
+count    50000.00000
+mean         0.30034
+std          0.45841
+min          0.00000
+25%          0.00000
+50%          0.00000
+75%          1.00000
+max          1.00000
+Name: Family_History, dtype: float64 
+Data Type: int64
+
+Column: Fasting_Blood_Sugar 
+count    50000.000000
+mean         0.149360
+std          0.356447
+min          0.000000
+25%          0.000000
+50%          0.000000
+75%          0.000000
+max          1.000000
+Name: Fasting_Blood_Sugar, dtype: float64 
+Data Type: int64
+
+Column: Exercise_Induced_Angina 
+count    50000.000000
+mean         0.201640
+std          0.401229
+min          0.000000
+25%          0.000000
+50%          0.000000
+75%          0.000000
+max          1.000000
+Name: Exercise_Induced_Angina, dtype: float64 
+Data Type: int64
+
+Column: Max_Heart_Rate_Achieved 
+count    50000.000000
+mean       149.305340
+std         28.823699
+min        100.000000
+25%        124.000000
+50%        149.000000
+75%        174.000000
+max        199.000000
+Name: Max_Heart_Rate_Achieved, dtype: float64 
+Data Type: int64
+
+#################################################
+####### Summaries of categorical columns: #######
+#################################################
+
+Column: 	Gender 
+Unique Values: 	['Female' 'Male']
+
+Column: 	Physical_Activity_Level 
+Unique Values: 	['Moderate' 'Low' 'High']
+
+Column: 	Stress_Level 
+Unique Values: 	['Moderate' 'Low' 'High']
+
+Column: 	Chest_Pain_Type 
+Unique Values: 	['Non-anginal' 'Asymptomatic' 'Typical' 'Atypical']
+
+Column: 	Thalassemia 
+Unique Values: 	['Reversible defect' 'Normal' 'Fixed defect']
+
+Column: 	ECG_Results 
+Unique Values: 	['Normal' 'ST-T abnormality' 'Left Ventricular Hypertrophy']
+
+Column: 	Heart_Attack_Risk 
+Unique Values: 	['Low' 'Moderate' 'High']
+
