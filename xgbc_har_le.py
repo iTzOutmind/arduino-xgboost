@@ -1,6 +1,5 @@
 # Import required libs
 import pandas as pd
-# from IPython.display import display
 from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
@@ -53,13 +52,10 @@ xgbc_le =  XGBClassifier(
     random_state=0              # Set random state for reproducibility
 )
 
-
 # Fitting and Predicting
 xgbc_le.fit(f_train_he_le, l_train_he_le)
 test_preds = xgbc_le.predict(f_test_he_le)
 train_preds= xgbc_le.predict(f_train_he_le)
-
-
 
 # Evaluation
 print(f'Test Accuracy LE: {accuracy_score(l_test_he_le, test_preds)}')
