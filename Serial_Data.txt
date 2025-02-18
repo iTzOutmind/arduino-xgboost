@@ -1,0 +1,755 @@
+Start: 0 | End: 250
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.27  |  Inference on Arduino: Score 1: 0.73  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.10  |  Inference on Arduino: Score 1: 0.90  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.30  |  Inference on Arduino: Score 1: 0.70  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.06  |  Inference on Arduino: Score 1: 0.94  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.36  |  Inference on Arduino: Score 1: 0.64  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.36  |  Inference on Arduino: Score 1: 0.64  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.24  |  Inference on Arduino: Score 1: 0.76  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.06  |  Inference on Arduino: Score 1: 0.94  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.05  |  Inference on Arduino: Score 1: 0.95  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.10  |  Inference on Arduino: Score 1: 0.90  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.18  |  Inference on Arduino: Score 1: 0.82  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.10  |  Inference on Arduino: Score 1: 0.90  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.06  |  Inference on Arduino: Score 1: 0.94  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.57  |  Inference on Arduino: Score 1: 0.43  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.68  |  Inference on Arduino: Score 1: 0.32  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.31  |  Inference on Arduino: Score 1: 0.69  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.45  |  Inference on Arduino: Score 1: 0.55  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.21  |  Inference on Arduino: Score 1: 0.79  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.22  |  Inference on Arduino: Score 1: 0.78  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.16  |  Inference on Arduino: Score 1: 0.84  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.06  |  Inference on Arduino: Score 1: 0.94  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.09  |  Inference on Arduino: Score 1: 0.91  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.06  |  Inference on Arduino: Score 1: 0.94  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.65  |  Inference on Arduino: Score 1: 0.35  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.10  |  Inference on Arduino: Score 1: 0.90  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.57  |  Inference on Arduino: Score 1: 0.43  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.25  |  Inference on Arduino: Score 1: 0.75  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.33  |  Inference on Arduino: Score 1: 0.67  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.64  |  Inference on Arduino: Score 1: 0.36  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.08  |  Inference on Arduino: Score 1: 0.92  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.27  |  Inference on Arduino: Score 1: 0.73  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.11  |  Inference on Arduino: Score 1: 0.89  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.34  |  Inference on Arduino: Score 1: 0.66  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.53  |  Inference on Arduino: Score 1: 0.47  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.12  |  Inference on Arduino: Score 1: 0.88  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.76  |  Inference on Arduino: Score 1: 0.24  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.12  |  Inference on Arduino: Score 1: 0.88  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.06  |  Inference on Arduino: Score 1: 0.94  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.13  |  Inference on Arduino: Score 1: 0.87  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.19  |  Inference on Arduino: Score 1: 0.81  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.16  |  Inference on Arduino: Score 1: 0.84  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.58  |  Inference on Arduino: Score 1: 0.42  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.29  |  Inference on Arduino: Score 1: 0.71  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.70  |  Inference on Arduino: Score 1: 0.30  |  
+Label on Arduino: ###################0  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.32  |  Inference on Arduino: Score 1: 0.68  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.44  |  Inference on Arduino: Score 1: 0.56  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.01  |  Inference on Arduino: Score 1: 0.99  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.04  |  Inference on Arduino: Score 1: 0.96  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.00  |  Inference on Arduino: Score 1: 1.00  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.05  |  Inference on Arduino: Score 1: 0.95  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.02  |  Inference on Arduino: Score 1: 0.98  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+Inference on Arduino: Score 0: 0.03  |  Inference on Arduino: Score 1: 0.97  |  
+Label on Arduino: 1  |  Label on PC: 1
+
+
+##### REPEATING... #####
+
