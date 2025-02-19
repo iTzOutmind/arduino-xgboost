@@ -4781,7 +4781,7 @@ void printScoreCSV(double input[], int length, int pc) {
   int x0 = input[0];
   int x1 = input[1];
   for(int i = 0; i < 2; i++) {
-    Serial.print(input[i]);
+    Serial.print(input[i],4);
     if(i==0) {
       Serial.print(",");
     }
@@ -4791,13 +4791,13 @@ void printScoreCSV(double input[], int length, int pc) {
 
 void infer() {
 	// Printing Range:
-	Serial.println("Start: 0 | End: 250");
+	// Serial.println("Start: 0 | End: 250");
 
 	Serial.println("aScore0,aScore1");
 	// Declarations:
 	int length = 2;
 	double result[length];
-	int time = 100;
+	int time = 10;
 
 	// Model Inference
 	double x_0[] = {-0.623154, 3.131787, 11.257041, -0.736, -0.059642, 0.56997};
