@@ -1,3 +1,5 @@
+// gyro_tm_exact.ino
+
 #include <math.h>
 #include <string.h>
 
@@ -8,6 +10,7 @@ double sigmoid(double x) {
     }
     return 1.0 / (1.0 + exp(-x));
 }
+
 void score(double * input, double * output) {
     double var0;
     if (input[0] >= -0.3945045) {
@@ -4733,7 +4736,7 @@ void score(double * input, double * output) {
     }
     double var355;
     var355 = sigmoid(var0 + var1 + var2 + var3 + var4 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12 + var13 + var14 + var15 + var16 + var17 + var18 + var19 + var20 + var21 + var22 + var23 + var24 + var25 + var26 + var27 + var28 + var29 + var30 + var31 + var32 + var33 + var34 + var35 + var36 + var37 + var38 + var39 + var40 + var41 + var42 + var43 + var44 + var45 + var46 + var47 + var48 + var49 + var50 + var51 + var52 + var53 + var54 + var55 + var56 + var57 + var58 + var59 + var60 + var61 + var62 + var63 + var64 + var65 + var66 + var67 + var68 + var69 + var70 + var71 + var72 + var73 + var74 + var75 + var76 + var77 + var78 + var79 + var80 + var81 + var82 + var83 + var84 + var85 + var86 + var87 + var88 + var89 + var90 + var91 + var92 + var93 + var94 + var95 + var96 + var97 + var98 + var99 + var100 + var101 + var102 + var103 + var104 + var105 + var106 + var107 + var108 + var109 + var110 + var111 + var112 + var113 + var114 + var115 + var116 + var117 + var118 + var119 + var120 + var121 + var122 + var123 + var124 + var125 + var126 + var127 + var128 + var129 + var130 + var131 + var132 + var133 + var134 + var135 + var136 + var137 + var138 + var139 + var140 + var141 + var142 + var143 + var144 + var145 + var146 + var147 + var148 + var149 + var150 + var151 + var152 + var153 + var154 + var155 + var156 + var157 + var158 + var159 + var160 + var161 + var162 + var163 + var164 + var165 + var166 + var167 + var168 + var169 + var170 + var171 + var172 + var173 + var174 + var175 + var176 + var177 + var178 + var179 + var180 + var181 + var182 + var183 + var184 + var185 + var186 + var187 + var188 + var189 + var190 + var191 + var192 + var193 + var194 + var195 + var196 + var197 + var198 + var199 + var200 + var201 + var202 + var203 + var204 + var205 + var206 + var207 + var208 + var209 + var210 + var211 + var212 + var213 + var214 + var215 + var216 + var217 + var218 + var219 + var220 + var221 + var222 + var223 + var224 + var225 + var226 + var227 + var228 + var229 + var230 + var231 + var232 + var233 + var234 + var235 + var236 + var237 + var238 + var239 + var240 + var241 + var242 + var243 + var244 + var245 + var246 + var247 + var248 + var249 + var250 + var251 + var252 + var253 + var254 + var255 + var256 + var257 + var258 + var259 + var260 + var261 + var262 + var263 + var264 + var265 + var266 + var267 + var268 + var269 + var270 + var271 + var272 + var273 + var274 + var275 + var276 + var277 + var278 + var279 + var280 + var281 + var282 + var283 + var284 + var285 + var286 + var287 + var288 + var289 + var290 + var291 + var292 + var293 + var294 + var295 + var296 + var297 + var298 + var299 + var300 + var301 + var302 + var303 + var304 + var305 + var306 + var307 + var308 + var309 + var310 + var311 + var312 + var313 + var314 + var315 + var316 + var317 + var318 + var319 + var320 + var321 + var322 + var323 + var324 + var325 + var326 + var327 + var328 + var329 + var330 + var331 + var332 + var333 + var334 + var335 + var336 + var337 + var338 + var339 + var340 + var341 + var342 + var343 + var344 + var345 + var346 + var347 + var348 + var349 + var350 + var351 + var352 + var353 + var354);
-    float mc[2] = {1.0 - var355, var355};
+    double mc[2] = {1.0 - var355, var355};
     memcpy(output, mc, 2 * sizeof(double));
 }
 
@@ -4774,10 +4777,23 @@ void printScoreCompare(double input[], int length, int pc) {
   Serial.println();
 }
 
+void printScoreCSV(double input[], int length, int pc) {
+  int x0 = input[0];
+  int x1 = input[1];
+  for(int i = 0; i < 2; i++) {
+    Serial.print(input[i]);
+    if(i==0) {
+      Serial.print(",");
+    }
+  }
+  Serial.println();
+}
+
 void infer() {
 	// Printing Range:
 	Serial.println("Start: 0 | End: 250");
 
+	Serial.println("aScore0,aScore1");
 	// Declarations:
 	int length = 2;
 	double result[length];
@@ -4787,1501 +4803,1501 @@ void infer() {
 	double x_0[] = {-0.623154, 3.131787, 11.257041, -0.736, -0.059642, 0.56997};
 	int y_0 = 1;
 	score(x_0, result);
-	printScoreCompare(result, length, y_0);
+	printScoreCSV(result, length, y_0);
 	delay(time);
 
 	double x_1[] = {1.366808, 2.376458, 11.491304, -0.219388, 0.297717, -0.341959};
 	int y_1 = 1;
 	score(x_1, result);
-	printScoreCompare(result, length, y_1);
+	printScoreCSV(result, length, y_1);
 	delay(time);
 
 	double x_2[] = {-0.931214, 1.462459, 9.501641, 0.435188, 0.209586, 0.465394};
 	int y_2 = 1;
 	score(x_2, result);
-	printScoreCompare(result, length, y_2);
+	printScoreCSV(result, length, y_2);
 	delay(time);
 
 	double x_3[] = {0.209265, 2.590363, 12.200529, 0.147434, -0.108728, -0.057775};
 	int y_3 = 1;
 	score(x_3, result);
-	printScoreCompare(result, length, y_3);
+	printScoreCSV(result, length, y_3);
 	delay(time);
 
 	double x_4[] = {-0.111518, 1.748065, 8.976833, 0.754365, 0.03308, -0.407495};
 	int y_4 = 1;
 	score(x_4, result);
-	printScoreCompare(result, length, y_4);
+	printScoreCSV(result, length, y_4);
 	delay(time);
 
 	double x_5[] = {-0.17798, 2.64006, 7.981852, -0.140428, 0.266522, -0.288973};
 	int y_5 = 1;
 	score(x_5, result);
-	printScoreCompare(result, length, y_5);
+	printScoreCSV(result, length, y_5);
 	delay(time);
 
 	double x_6[] = {0.403561, 2.209106, 7.659422, -0.338575, 0.171403, -0.129737};
 	int y_6 = 1;
 	score(x_6, result);
-	printScoreCompare(result, length, y_6);
+	printScoreCSV(result, length, y_6);
 	delay(time);
 
 	double x_7[] = {0.18262, 2.995571, 9.547296, 0.155736, -0.069143, -0.021728};
 	int y_7 = 1;
 	score(x_7, result);
-	printScoreCompare(result, length, y_7);
+	printScoreCSV(result, length, y_7);
 	delay(time);
 
 	double x_8[] = {-0.248932, 1.057401, 12.385245, 0.035847, 0.013138, 0.360773};
 	int y_8 = 1;
 	score(x_8, result);
-	printScoreCompare(result, length, y_8);
+	printScoreCSV(result, length, y_8);
 	delay(time);
 
 	double x_9[] = {-0.097747, 2.312092, 8.507558, 0.218066, 0.246937, -0.338734};
 	int y_9 = 1;
 	score(x_9, result);
-	printScoreCompare(result, length, y_9);
+	printScoreCSV(result, length, y_9);
 	delay(time);
 
 	double x_10[] = {-0.958307, 1.745969, 9.609567, -0.331516, -0.042587, 0.418059};
 	int y_10 = 1;
 	score(x_10, result);
-	printScoreCompare(result, length, y_10);
+	printScoreCSV(result, length, y_10);
 	delay(time);
 
 	double x_11[] = {2.06765, 0.430205, 13.596825, -0.216439, -0.044937, -0.10312};
 	int y_11 = 1;
 	score(x_11, result);
-	printScoreCompare(result, length, y_11);
+	printScoreCSV(result, length, y_11);
 	delay(time);
 
 	double x_12[] = {1.581611, 2.818489, 13.388009, -0.322366, 0.390015, -0.178312};
 	int y_12 = 1;
 	score(x_12, result);
-	printScoreCompare(result, length, y_12);
+	printScoreCSV(result, length, y_12);
 	delay(time);
 
 	double x_13[] = {0.240699, 1.993854, 12.900623, -0.804063, -0.280203, -0.08198};
 	int y_13 = 1;
 	score(x_13, result);
-	printScoreCompare(result, length, y_13);
+	printScoreCSV(result, length, y_13);
 	delay(time);
 
 	double x_14[] = {0.059726, 1.83234, 11.15181, -0.228472, -0.048252, 0.496837};
 	int y_14 = 1;
 	score(x_14, result);
-	printScoreCompare(result, length, y_14);
+	printScoreCSV(result, length, y_14);
 	delay(time);
 
 	double x_15[] = {-0.344284, 2.099085, 8.47807, 0.177153, -0.08545, -0.001182};
 	int y_15 = 1;
 	score(x_15, result);
-	printScoreCompare(result, length, y_15);
+	printScoreCSV(result, length, y_15);
 	delay(time);
 
 	double x_16[] = {-0.179477, 3.559747, 6.881789, -0.14788, 0.148133, -0.226857};
 	int y_16 = 1;
 	score(x_16, result);
-	printScoreCompare(result, length, y_16);
+	printScoreCSV(result, length, y_16);
 	delay(time);
 
 	double x_17[] = {4.678671, 0.4567, 11.599828, -0.001511, -0.165192, -0.096345};
 	int y_17 = 1;
 	score(x_17, result);
-	printScoreCompare(result, length, y_17);
+	printScoreCSV(result, length, y_17);
 	delay(time);
 
 	double x_18[] = {-0.141905, 4.112847, 12.25756, -0.622587, 0.072925, -0.060069};
 	int y_18 = 1;
 	score(x_18, result);
-	printScoreCompare(result, length, y_18);
+	printScoreCSV(result, length, y_18);
 	delay(time);
 
 	double x_19[] = {0.407902, 1.382525, 7.386091, -0.253205, 0.100281, -0.349632};
 	int y_19 = 1;
 	score(x_19, result);
-	printScoreCompare(result, length, y_19);
+	printScoreCSV(result, length, y_19);
 	delay(time);
 
 	double x_20[] = {0.87538, 1.742227, 10.054891, 0.012892, 0.017248, -0.281757};
 	int y_20 = 1;
 	score(x_20, result);
-	printScoreCompare(result, length, y_20);
+	printScoreCSV(result, length, y_20);
 	delay(time);
 
 	double x_21[] = {-0.49053, 1.09662, 8.272248, 0.139795, 0.512044, -0.125974};
 	int y_21 = 1;
 	score(x_21, result);
-	printScoreCompare(result, length, y_21);
+	printScoreCSV(result, length, y_21);
 	delay(time);
 
 	double x_22[] = {1.043779, 1.419199, 9.8341, -0.689745, 0.02235, 0.448672};
 	int y_22 = 1;
 	score(x_22, result);
-	printScoreCompare(result, length, y_22);
+	printScoreCSV(result, length, y_22);
 	delay(time);
 
 	double x_23[] = {-0.014819, 1.070574, 7.483239, -0.504728, 0.127121, -0.508805};
 	int y_23 = 1;
 	score(x_23, result);
-	printScoreCompare(result, length, y_23);
+	printScoreCSV(result, length, y_23);
 	delay(time);
 
 	double x_24[] = {-0.309257, 2.663112, 7.320078, -0.270741, -0.090023, 0.229317};
 	int y_24 = 1;
 	score(x_24, result);
-	printScoreCompare(result, length, y_24);
+	printScoreCSV(result, length, y_24);
 	delay(time);
 
 	double x_25[] = {0.896037, 0.085772, 10.522518, -0.019541, -0.073002, 0.024696};
 	int y_25 = 1;
 	score(x_25, result);
-	printScoreCompare(result, length, y_25);
+	printScoreCSV(result, length, y_25);
 	delay(time);
 
 	double x_26[] = {0.89948, 1.021326, 7.048243, 0.556877, 0.091975, -0.06388};
 	int y_26 = 1;
 	score(x_26, result);
-	printScoreCompare(result, length, y_26);
+	printScoreCSV(result, length, y_26);
 	delay(time);
 
 	double x_27[] = {0.797691, 2.376758, 11.384875, -0.612042, 0.065985, -0.47649};
 	int y_27 = 1;
 	score(x_27, result);
-	printScoreCompare(result, length, y_27);
+	printScoreCSV(result, length, y_27);
 	delay(time);
 
 	double x_28[] = {0.298479, 1.326541, 6.9728, 0.220506, -0.065857, -0.539153};
 	int y_28 = 1;
 	score(x_28, result);
-	printScoreCompare(result, length, y_28);
+	printScoreCSV(result, length, y_28);
 	delay(time);
 
 	double x_29[] = {-1.010698, 4.710105, 11.095976, 3.5e-05, -0.3583, 0.165857};
 	int y_29 = 1;
 	score(x_29, result);
-	printScoreCompare(result, length, y_29);
+	printScoreCSV(result, length, y_29);
 	delay(time);
 
 	double x_30[] = {-0.327968, 1.828597, 9.075777, -0.004429, -0.06608, -0.076243};
 	int y_30 = 1;
 	score(x_30, result);
-	printScoreCompare(result, length, y_30);
+	printScoreCSV(result, length, y_30);
 	delay(time);
 
 	double x_31[] = {0.517324, 1.626967, 9.681717, 0.014175, 0.175041, -0.199627};
 	int y_31 = 1;
 	score(x_31, result);
-	printScoreCompare(result, length, y_31);
+	printScoreCSV(result, length, y_31);
 	delay(time);
 
 	double x_32[] = {-0.114063, 3.044519, 10.100396, -0.292451, 0.011631, 0.008098};
 	int y_32 = 1;
 	score(x_32, result);
-	printScoreCompare(result, length, y_32);
+	printScoreCSV(result, length, y_32);
 	delay(time);
 
 	double x_33[] = {0.304317, 3.338358, 12.15203, 0.024056, -0.628172, -0.844948};
 	int y_33 = 1;
 	score(x_33, result);
-	printScoreCompare(result, length, y_33);
+	printScoreCSV(result, length, y_33);
 	delay(time);
 
 	double x_34[] = {-0.982706, 2.027833, 11.454181, -0.373702, 0.229649, 0.167135};
 	int y_34 = 1;
 	score(x_34, result);
-	printScoreCompare(result, length, y_34);
+	printScoreCSV(result, length, y_34);
 	delay(time);
 
 	double x_35[] = {-0.733325, 3.35183, 11.787837, 0.213521, 0.048133, -0.419252};
 	int y_35 = 1;
 	score(x_35, result);
-	printScoreCompare(result, length, y_35);
+	printScoreCSV(result, length, y_35);
 	delay(time);
 
 	double x_36[] = {0.414638, 0.841849, 10.951227, 0.037226, -0.456882, -0.890448};
 	int y_36 = 1;
 	score(x_36, result);
-	printScoreCompare(result, length, y_36);
+	printScoreCSV(result, length, y_36);
 	delay(time);
 
 	double x_37[] = {-0.861309, 2.655927, 8.832084, -0.228607, -0.223958, 0.031645};
 	int y_37 = 1;
 	score(x_37, result);
-	printScoreCompare(result, length, y_37);
+	printScoreCSV(result, length, y_37);
 	delay(time);
 
 	double x_38[] = {-0.441133, 1.025517, 11.8055, 0.309872, 0.10934, 0.043496};
 	int y_38 = 1;
 	score(x_38, result);
-	printScoreCompare(result, length, y_38);
+	printScoreCSV(result, length, y_38);
 	delay(time);
 
 	double x_39[] = {-0.062121, 1.221909, 11.358829, -0.104018, 0.190778, -0.138792};
 	int y_39 = 1;
 	score(x_39, result);
-	printScoreCompare(result, length, y_39);
+	printScoreCSV(result, length, y_39);
 	delay(time);
 
 	double x_40[] = {-0.755629, 2.196832, 7.816446, -0.080302, -0.180336, 0.094146};
 	int y_40 = 1;
 	score(x_40, result);
-	printScoreCompare(result, length, y_40);
+	printScoreCSV(result, length, y_40);
 	delay(time);
 
 	double x_41[] = {-0.76446, 3.802543, 12.55095, 0.043052, 0.876468, 0.303031};
 	int y_41 = 1;
 	score(x_41, result);
-	printScoreCompare(result, length, y_41);
+	printScoreCSV(result, length, y_41);
 	delay(time);
 
 	double x_42[] = {0.393083, 1.26472, 10.104138, -0.257551, 0.412934, 0.025518};
 	int y_42 = 1;
 	score(x_42, result);
-	printScoreCompare(result, length, y_42);
+	printScoreCSV(result, length, y_42);
 	delay(time);
 
 	double x_43[] = {0.609682, 1.276994, 12.310849, -0.026866, -0.145919, -0.08705};
 	int y_43 = 1;
 	score(x_43, result);
-	printScoreCompare(result, length, y_43);
+	printScoreCSV(result, length, y_43);
 	delay(time);
 
 	double x_44[] = {-0.90906, 3.259023, 7.881111, 0.193687, 0.107909, 0.096086};
 	int y_44 = 1;
 	score(x_44, result);
-	printScoreCompare(result, length, y_44);
+	printScoreCSV(result, length, y_44);
 	delay(time);
 
 	double x_45[] = {0.091759, 3.241659, 8.123158, -0.14633, 0.106643, -0.172289};
 	int y_45 = 1;
 	score(x_45, result);
-	printScoreCompare(result, length, y_45);
+	printScoreCSV(result, length, y_45);
 	delay(time);
 
 	double x_46[] = {0.002844, 2.583029, 11.85834, 0.18063, 0.224634, -0.253352};
 	int y_46 = 1;
 	score(x_46, result);
-	printScoreCompare(result, length, y_46);
+	printScoreCSV(result, length, y_46);
 	delay(time);
 
 	double x_47[] = {-0.274679, 1.02926, 11.160492, 0.26372, 0.227427, -0.270206};
 	int y_47 = 1;
 	score(x_47, result);
-	printScoreCompare(result, length, y_47);
+	printScoreCSV(result, length, y_47);
 	delay(time);
 
 	double x_48[] = {1.427731, 2.35146, 11.467503, -0.341791, -0.18004, -0.266395};
 	int y_48 = 1;
 	score(x_48, result);
-	printScoreCompare(result, length, y_48);
+	printScoreCSV(result, length, y_48);
 	delay(time);
 
 	double x_49[] = {-0.026495, 3.292553, 7.260651, 0.176294, 0.043209, -0.061733};
 	int y_49 = 1;
 	score(x_49, result);
-	printScoreCompare(result, length, y_49);
+	printScoreCSV(result, length, y_49);
 	delay(time);
 
 	double x_50[] = {-0.067809, 2.391876, 9.539063, 0.074206, 0.040939, 0.009205};
 	int y_50 = 1;
 	score(x_50, result);
-	printScoreCompare(result, length, y_50);
+	printScoreCSV(result, length, y_50);
 	delay(time);
 
 	double x_51[] = {0.479453, 3.535199, 11.010504, -0.055668, -0.019685, -0.005184};
 	int y_51 = 1;
 	score(x_51, result);
-	printScoreCompare(result, length, y_51);
+	printScoreCSV(result, length, y_51);
 	delay(time);
 
 	double x_52[] = {0.503852, 0.966241, 7.031179, -0.404484, 0.050422, 0.513205};
 	int y_52 = 1;
 	score(x_52, result);
-	printScoreCompare(result, length, y_52);
+	printScoreCSV(result, length, y_52);
 	delay(time);
 
 	double x_53[] = {0.440983, 3.035089, 8.257728, -0.331321, -0.302614, 0.223355};
 	int y_53 = 1;
 	score(x_53, result);
-	printScoreCompare(result, length, y_53);
+	printScoreCSV(result, length, y_53);
 	delay(time);
 
 	double x_54[] = {-1.342109, 2.118694, 8.952733, -0.038155, 0.000176, 0.298199};
 	int y_54 = 1;
 	score(x_54, result);
-	printScoreCompare(result, length, y_54);
+	printScoreCSV(result, length, y_54);
 	delay(time);
 
 	double x_55[] = {-0.36075, 2.136208, 6.899902, -0.055564, 0.018455, 0.065696};
 	int y_55 = 1;
 	score(x_55, result);
-	printScoreCompare(result, length, y_55);
+	printScoreCSV(result, length, y_55);
 	delay(time);
 
 	double x_56[] = {-0.014819, 3.238066, 6.09742, 0.248481, 0.068332, -0.019391};
 	int y_56 = 1;
 	score(x_56, result);
-	printScoreCompare(result, length, y_56);
+	printScoreCSV(result, length, y_56);
 	delay(time);
 
 	double x_57[] = {-0.393232, 3.09212, 9.181906, 0.322885, 0.918091, -0.058874};
 	int y_57 = 1;
 	score(x_57, result);
-	printScoreCompare(result, length, y_57);
+	printScoreCSV(result, length, y_57);
 	delay(time);
 
 	double x_58[] = {-0.182171, 2.465972, 6.356532, 0.059789, -0.103344, -0.137657};
 	int y_58 = 1;
 	score(x_58, result);
-	printScoreCompare(result, length, y_58);
+	printScoreCSV(result, length, y_58);
 	delay(time);
 
 	double x_59[] = {-0.484243, 0.696053, 13.022769, 0.052085, -0.08673, -0.113399};
 	int y_59 = 1;
 	score(x_59, result);
-	printScoreCompare(result, length, y_59);
+	printScoreCSV(result, length, y_59);
 	delay(time);
 
 	double x_60[] = {-0.433798, 3.328329, 10.306068, 0.501602, -0.243626, 0.580458};
 	int y_60 = 1;
 	score(x_60, result);
-	printScoreCompare(result, length, y_60);
+	printScoreCSV(result, length, y_60);
 	delay(time);
 
 	double x_61[] = {0.867147, 2.463427, 8.469687, -0.075665, 0.058728, -0.29328};
 	int y_61 = 1;
 	score(x_61, result);
-	printScoreCompare(result, length, y_61);
+	printScoreCSV(result, length, y_61);
 	delay(time);
 
 	double x_62[] = {-0.772693, 2.326761, 11.289823, -0.634518, -0.225289, -0.207624};
 	int y_62 = 1;
 	score(x_62, result);
-	printScoreCompare(result, length, y_62);
+	printScoreCSV(result, length, y_62);
 	delay(time);
 
 	double x_63[] = {0.208965, 2.017804, 12.063564, 0.172104, -0.298589, 0.018007};
 	int y_63 = 1;
 	score(x_63, result);
-	printScoreCompare(result, length, y_63);
+	printScoreCSV(result, length, y_63);
 	delay(time);
 
 	double x_64[] = {-0.045505, 2.085463, 6.987769, -0.669441, 0.075428, 0.042325};
 	int y_64 = 1;
 	score(x_64, result);
-	printScoreCompare(result, length, y_64);
+	printScoreCSV(result, length, y_64);
 	delay(time);
 
 	double x_65[] = {0.141905, 2.867437, 10.927576, -0.082634, -0.097703, 0.232056};
 	int y_65 = 1;
 	score(x_65, result);
-	printScoreCompare(result, length, y_65);
+	printScoreCSV(result, length, y_65);
 	delay(time);
 
 	double x_66[] = {0.460592, 1.989064, 7.307205, 0.430501, -0.150183, 0.262474};
 	int y_66 = 1;
 	score(x_66, result);
-	printScoreCompare(result, length, y_66);
+	printScoreCSV(result, length, y_66);
 	delay(time);
 
 	double x_67[] = {0.207469, 4.021537, 9.21379, -0.029705, -0.018253, -0.148797};
 	int y_67 = 1;
 	score(x_67, result);
-	printScoreCompare(result, length, y_67);
+	printScoreCSV(result, length, y_67);
 	delay(time);
 
 	double x_68[] = {-0.280367, 1.33687, 7.773934, 0.152635, 0.283507, -0.45925};
 	int y_68 = 1;
 	score(x_68, result);
-	printScoreCompare(result, length, y_68);
+	printScoreCSV(result, length, y_68);
 	delay(time);
 
 	double x_69[] = {1.35109, 0.428259, 8.010442, 0.060616, 0.39156, -0.033557};
 	int y_69 = 1;
 	score(x_69, result);
-	printScoreCompare(result, length, y_69);
+	printScoreCSV(result, length, y_69);
 	delay(time);
 
 	double x_70[] = {-0.460742, 0.714464, 10.333911, -0.272166, 0.05478, 0.012342};
 	int y_70 = 1;
 	score(x_70, result);
-	printScoreCompare(result, length, y_70);
+	printScoreCSV(result, length, y_70);
 	delay(time);
 
 	double x_71[] = {-0.00973, 2.93345, 9.951156, -0.347467, -0.222241, 0.065321};
 	int y_71 = 1;
 	score(x_71, result);
-	printScoreCompare(result, length, y_71);
+	printScoreCSV(result, length, y_71);
 	delay(time);
 
 	double x_72[] = {-0.123942, 1.496288, 7.046447, 0.163582, -0.077775, -0.14618};
 	int y_72 = 1;
 	score(x_72, result);
-	printScoreCompare(result, length, y_72);
+	printScoreCSV(result, length, y_72);
 	delay(time);
 
 	double x_73[] = {-0.522114, 3.04392, 11.866723, 0.181791, 0.136847, 0.067698};
 	int y_73 = 1;
 	score(x_73, result);
-	printScoreCompare(result, length, y_73);
+	printScoreCSV(result, length, y_73);
 	delay(time);
 
 	double x_74[] = {-0.515079, 4.289181, 10.751841, 0.0788, -0.181494, -0.066949};
 	int y_74 = 1;
 	score(x_74, result);
-	printScoreCompare(result, length, y_74);
+	printScoreCSV(result, length, y_74);
 	delay(time);
 
 	double x_75[] = {0.315394, 1.835483, 8.990454, -0.026009, 0.070868, -0.073858};
 	int y_75 = 1;
 	score(x_75, result);
-	printScoreCompare(result, length, y_75);
+	printScoreCSV(result, length, y_75);
 	delay(time);
 
 	double x_76[] = {1.553769, 1.366209, 10.761571, 0.44991, -0.291057, -1.301159};
 	int y_76 = 1;
 	score(x_76, result);
-	printScoreCompare(result, length, y_76);
+	printScoreCSV(result, length, y_76);
 	delay(time);
 
 	double x_77[] = {-1.294059, 2.482438, 12.087813, -0.243989, -0.453108, -0.090075};
 	int y_77 = 1;
 	score(x_77, result);
-	printScoreCompare(result, length, y_77);
+	printScoreCSV(result, length, y_77);
 	delay(time);
 
 	double x_78[] = {0.926573, -0.006886, 11.864328, 0.174572, -0.060518, 0.371454};
 	int y_78 = 1;
 	score(x_78, result);
-	printScoreCompare(result, length, y_78);
+	printScoreCSV(result, length, y_78);
 	delay(time);
 
 	double x_79[] = {-0.595611, 3.096611, 7.990683, 0.199167, 0.080387, 0.45895};
 	int y_79 = 1;
 	score(x_79, result);
-	printScoreCompare(result, length, y_79);
+	printScoreCSV(result, length, y_79);
 	delay(time);
 
 	double x_80[] = {-0.094903, 3.344794, 9.450448, -1.467372, -0.288292, 0.365652};
 	int y_80 = 1;
 	score(x_80, result);
-	printScoreCompare(result, length, y_80);
+	printScoreCSV(result, length, y_80);
 	delay(time);
 
 	double x_81[] = {-0.490979, 1.532813, 9.696536, 0.151783, 0.126023, 0.485336};
 	int y_81 = 1;
 	score(x_81, result);
-	printScoreCompare(result, length, y_81);
+	printScoreCSV(result, length, y_81);
 	delay(time);
 
 	double x_82[] = {1.337169, 2.754272, 12.018208, -0.121709, -0.278657, -0.084368};
 	int y_82 = 1;
 	score(x_82, result);
-	printScoreCompare(result, length, y_82);
+	printScoreCSV(result, length, y_82);
 	delay(time);
 
 	double x_83[] = {-0.885109, 0.814456, 10.158026, 0.274658, -0.051124, -0.138118};
 	int y_83 = 1;
 	score(x_83, result);
-	printScoreCompare(result, length, y_83);
+	printScoreCSV(result, length, y_83);
 	delay(time);
 
 	double x_84[] = {0.020657, 3.640879, 7.965835, -0.267875, -0.060976, -0.126114};
 	int y_84 = 1;
 	score(x_84, result);
-	printScoreCompare(result, length, y_84);
+	printScoreCSV(result, length, y_84);
 	delay(time);
 
 	double x_85[] = {0.518073, 1.647474, 7.399563, 0.074903, -0.042796, 0.300408};
 	int y_85 = 1;
 	score(x_85, result);
-	printScoreCompare(result, length, y_85);
+	printScoreCSV(result, length, y_85);
 	delay(time);
 
 	double x_86[] = {-0.712668, 1.673221, 9.186696, 0.268032, -0.010546, 0.378941};
 	int y_86 = 1;
 	score(x_86, result);
-	printScoreCompare(result, length, y_86);
+	printScoreCSV(result, length, y_86);
 	delay(time);
 
 	double x_87[] = {-0.454455, 3.796705, 11.33443, -0.003536, 0.255132, 0.104756};
 	int y_87 = 1;
 	score(x_87, result);
-	printScoreCompare(result, length, y_87);
+	printScoreCSV(result, length, y_87);
 	delay(time);
 
 	double x_88[] = {-0.725092, 3.450924, 8.368797, 0.085495, -0.329309, 0.164403};
 	int y_88 = 1;
 	score(x_88, result);
-	printScoreCompare(result, length, y_88);
+	printScoreCSV(result, length, y_88);
 	delay(time);
 
 	double x_89[] = {-0.845741, 0.526006, 10.650053, -0.049892, -0.286261, -0.197195};
 	int y_89 = 1;
 	score(x_89, result);
-	printScoreCompare(result, length, y_89);
+	printScoreCSV(result, length, y_89);
 	delay(time);
 
 	double x_90[] = {0.077838, 3.645818, 8.692873, 0.124287, -0.235445, 0.180525};
 	int y_90 = 1;
 	score(x_90, result);
-	printScoreCompare(result, length, y_90);
+	printScoreCSV(result, length, y_90);
 	delay(time);
 
 	double x_91[] = {0.349972, 0.828677, 12.712913, -0.131592, -0.104142, 0.120706};
 	int y_91 = 1;
 	score(x_91, result);
-	printScoreCompare(result, length, y_91);
+	printScoreCSV(result, length, y_91);
 	delay(time);
 
 	double x_92[] = {0.599054, 1.610501, 6.459218, 0.182326, -0.081311, -0.202438};
 	int y_92 = 1;
 	score(x_92, result);
-	printScoreCompare(result, length, y_92);
+	printScoreCSV(result, length, y_92);
 	delay(time);
 
 	double x_93[] = {0.583337, -0.082928, 9.658814, 0.341802, 0.379332, -0.104096};
 	int y_93 = 1;
 	score(x_93, result);
-	printScoreCompare(result, length, y_93);
+	printScoreCSV(result, length, y_93);
 	delay(time);
 
 	double x_94[] = {0.080982, 2.710114, 6.508017, 0.128959, -0.210729, -2.5e-05};
 	int y_94 = 1;
 	score(x_94, result);
-	printScoreCompare(result, length, y_94);
+	printScoreCSV(result, length, y_94);
 	delay(time);
 
 	double x_95[] = {0.553848, 1.133443, 8.916807, 0.1689, 0.004079, 0.309952};
 	int y_95 = 1;
 	score(x_95, result);
-	printScoreCompare(result, length, y_95);
+	printScoreCSV(result, length, y_95);
 	delay(time);
 
 	double x_96[] = {1.133593, 1.682202, 8.981623, 0.645144, -0.105712, 0.259032};
 	int y_96 = 1;
 	score(x_96, result);
-	printScoreCompare(result, length, y_96);
+	printScoreCSV(result, length, y_96);
 	delay(time);
 
 	double x_97[] = {0.107027, 2.320475, 6.856492, 0.049209, -0.05503, 0.196256};
 	int y_97 = 1;
 	score(x_97, result);
-	printScoreCompare(result, length, y_97);
+	printScoreCSV(result, length, y_97);
 	delay(time);
 
 	double x_98[] = {-0.458646, 1.803749, 7.771539, -0.313529, -0.132979, -0.280679};
 	int y_98 = 1;
 	score(x_98, result);
-	printScoreCompare(result, length, y_98);
+	printScoreCSV(result, length, y_98);
 	delay(time);
 
 	double x_99[] = {-0.036225, 3.267106, 7.957303, -0.382315, 0.711144, 0.289718};
 	int y_99 = 1;
 	score(x_99, result);
-	printScoreCompare(result, length, y_99);
+	printScoreCSV(result, length, y_99);
 	delay(time);
 
 	double x_100[] = {0.743204, 1.361718, 8.35278, -0.605236, 0.124808, 0.082972};
 	int y_100 = 1;
 	score(x_100, result);
-	printScoreCompare(result, length, y_100);
+	printScoreCSV(result, length, y_100);
 	delay(time);
 
 	double x_101[] = {1.499731, 0.949326, 10.966794, -0.281121, 0.066559, 0.038339};
 	int y_101 = 1;
 	score(x_101, result);
-	printScoreCompare(result, length, y_101);
+	printScoreCSV(result, length, y_101);
 	delay(time);
 
 	double x_102[] = {-0.910856, 1.603615, 8.597072, 0.950688, 0.162053, 0.422634};
 	int y_102 = 1;
 	score(x_102, result);
-	printScoreCompare(result, length, y_102);
+	printScoreCSV(result, length, y_102);
 	delay(time);
 
 	double x_103[] = {-0.103734, 2.579137, 8.15085, 0.099942, -0.079635, 0.403021};
 	int y_103 = 1;
 	score(x_103, result);
-	printScoreCompare(result, length, y_103);
+	printScoreCSV(result, length, y_103);
 	delay(time);
 
 	double x_104[] = {-0.261955, 3.911516, 8.647517, 0.026296, -0.039249, -0.091335};
 	int y_104 = 1;
 	score(x_104, result);
-	printScoreCompare(result, length, y_104);
+	printScoreCSV(result, length, y_104);
 	delay(time);
 
 	double x_105[] = {-0.738714, 2.578538, 9.252859, -0.102908, 0.031875, -0.027748};
 	int y_105 = 1;
 	score(x_105, result);
-	printScoreCompare(result, length, y_105);
+	printScoreCSV(result, length, y_105);
 	delay(time);
 
 	double x_106[] = {-1.147813, 1.746269, 8.938512, 0.422767, 0.151303, 0.084959};
 	int y_106 = 1;
 	score(x_106, result);
-	printScoreCompare(result, length, y_106);
+	printScoreCSV(result, length, y_106);
 	delay(time);
 
 	double x_107[] = {-0.233365, 2.61611, 7.527846, -0.032462, 0.068207, 0.040996};
 	int y_107 = 1;
 	score(x_107, result);
-	printScoreCompare(result, length, y_107);
+	printScoreCSV(result, length, y_107);
 	delay(time);
 
 	double x_108[] = {-0.136815, 2.206861, 6.271508, 0.182769, -0.004798, -0.091947};
 	int y_108 = 1;
 	score(x_108, result);
-	printScoreCompare(result, length, y_108);
+	printScoreCSV(result, length, y_108);
 	delay(time);
 
 	double x_109[] = {0.704435, 2.924469, 10.981763, -0.187802, -0.141779, -0.093954};
 	int y_109 = 1;
 	score(x_109, result);
-	printScoreCompare(result, length, y_109);
+	printScoreCSV(result, length, y_109);
 	delay(time);
 
 	double x_110[] = {-1.628164, 3.756738, 10.419532, 0.647498, -0.09653, 0.225882};
 	int y_110 = 1;
 	score(x_110, result);
-	printScoreCompare(result, length, y_110);
+	printScoreCSV(result, length, y_110);
 	delay(time);
 
 	double x_111[] = {0.320184, 2.973417, 6.416557, 0.01106, 0.053914, 0.050469};
 	int y_111 = 1;
 	score(x_111, result);
-	printScoreCompare(result, length, y_111);
+	printScoreCSV(result, length, y_111);
 	delay(time);
 
 	double x_112[] = {-0.729283, 1.549727, 11.772719, -0.461102, -0.095152, 0.454655};
 	int y_112 = 1;
 	score(x_112, result);
-	printScoreCompare(result, length, y_112);
+	printScoreCSV(result, length, y_112);
 	delay(time);
 
 	double x_113[] = {-0.546214, 2.33694, 6.707552, 0.273674, -0.038916, -0.161703};
 	int y_113 = 1;
 	score(x_113, result);
-	printScoreCompare(result, length, y_113);
+	printScoreCSV(result, length, y_113);
 	delay(time);
 
 	double x_114[] = {-1.287323, 3.945495, 10.597662, 0.168115, 0.334822, 0.117682};
 	int y_114 = 1;
 	score(x_114, result);
-	printScoreCompare(result, length, y_114);
+	printScoreCSV(result, length, y_114);
 	delay(time);
 
 	double x_115[] = {-0.034578, 3.051255, 8.253387, 0.112534, -0.306746, -0.041875};
 	int y_115 = 1;
 	score(x_115, result);
-	printScoreCompare(result, length, y_115);
+	printScoreCSV(result, length, y_115);
 	delay(time);
 
 	double x_116[] = {-0.376467, 2.212998, 11.865226, 0.050056, 0.001153, -0.073184};
 	int y_116 = 1;
 	score(x_116, result);
-	printScoreCompare(result, length, y_116);
+	printScoreCSV(result, length, y_116);
 	delay(time);
 
 	double x_117[] = {-0.108225, 2.223925, 13.210329, -0.086483, 0.154826, 0.18668};
 	int y_117 = 1;
 	score(x_117, result);
-	printScoreCompare(result, length, y_117);
+	printScoreCSV(result, length, y_117);
 	delay(time);
 
 	double x_118[] = {-0.045505, 3.131039, 7.516918, -0.290542, -0.367761, -0.034876};
 	int y_118 = 1;
 	score(x_118, result);
-	printScoreCompare(result, length, y_118);
+	printScoreCSV(result, length, y_118);
 	delay(time);
 
 	double x_119[] = {-1.520688, 3.705395, 10.619517, 0.244849, -0.360908, 0.123661};
 	int y_119 = 1;
 	score(x_119, result);
-	printScoreCompare(result, length, y_119);
+	printScoreCSV(result, length, y_119);
 	delay(time);
 
 	double x_120[] = {-0.151335, 2.601889, 9.147627, 0.123141, 0.182128, 0.06719};
 	int y_120 = 1;
 	score(x_120, result);
-	printScoreCompare(result, length, y_120);
+	printScoreCSV(result, length, y_120);
 	delay(time);
 
 	double x_121[] = {0.936902, 1.076561, 7.655979, -0.023915, 0.186144, 0.106816};
 	int y_121 = 1;
 	score(x_121, result);
-	printScoreCompare(result, length, y_121);
+	printScoreCSV(result, length, y_121);
 	delay(time);
 
 	double x_122[] = {-0.883762, 2.597698, 9.308543, 0.360679, -0.305648, 0.086385};
 	int y_122 = 1;
 	score(x_122, result);
-	printScoreCompare(result, length, y_122);
+	printScoreCSV(result, length, y_122);
 	delay(time);
 
 	double x_123[] = {0.446222, 1.383573, 12.0221, 0.074186, -0.265013, 0.087352};
 	int y_123 = 1;
 	score(x_123, result);
-	printScoreCompare(result, length, y_123);
+	printScoreCSV(result, length, y_123);
 	delay(time);
 
 	double x_124[] = {-0.790806, 1.667233, 9.77632, -0.008462, 0.035829, -0.00312};
 	int y_124 = 1;
 	score(x_124, result);
-	printScoreCompare(result, length, y_124);
+	printScoreCSV(result, length, y_124);
 	delay(time);
 
 	double x_125[] = {-0.64426, 3.244054, 8.973839, 0.31527, 0.116967, 0.034653};
 	int y_125 = 1;
 	score(x_125, result);
-	printScoreCompare(result, length, y_125);
+	printScoreCSV(result, length, y_125);
 	delay(time);
 
 	double x_126[] = {-0.723745, 2.099833, 10.013128, 0.397491, 0.137176, -0.110091};
 	int y_126 = 1;
 	score(x_126, result);
-	printScoreCompare(result, length, y_126);
+	printScoreCSV(result, length, y_126);
 	delay(time);
 
 	double x_127[] = {1.146466, 1.612148, 8.744067, -0.237544, -0.142793, 0.073983};
 	int y_127 = 1;
 	score(x_127, result);
-	printScoreCompare(result, length, y_127);
+	printScoreCSV(result, length, y_127);
 	delay(time);
 
 	double x_128[] = {1.511706, 2.303709, 8.713979, -0.889952, -0.45757, -0.40471};
 	int y_128 = 1;
 	score(x_128, result);
-	printScoreCompare(result, length, y_128);
+	printScoreCSV(result, length, y_128);
 	delay(time);
 
 	double x_129[] = {0.120948, 3.339855, 8.618178, 0.299525, -0.25784, 0.232767};
 	int y_129 = 1;
 	score(x_129, result);
-	printScoreCompare(result, length, y_129);
+	printScoreCSV(result, length, y_129);
 	delay(time);
 
 	double x_130[] = {1.107397, 2.594405, 9.005273, -0.162879, 0.346562, 0.184082};
 	int y_130 = 1;
 	score(x_130, result);
-	printScoreCompare(result, length, y_130);
+	printScoreCSV(result, length, y_130);
 	delay(time);
 
 	double x_131[] = {-0.316292, -0.032632, 14.71964, -0.151315, -0.034528, -0.0416};
 	int y_131 = 1;
 	score(x_131, result);
-	printScoreCompare(result, length, y_131);
+	printScoreCSV(result, length, y_131);
 	delay(time);
 
 	double x_132[] = {-0.718805, 1.433719, 12.642111, -0.188187, 0.03973, -0.362133};
 	int y_132 = 1;
 	score(x_132, result);
-	printScoreCompare(result, length, y_132);
+	printScoreCSV(result, length, y_132);
 	delay(time);
 
 	double x_133[] = {0.840352, 1.281485, 12.44048, 0.022125, 0.110819, -0.124121};
 	int y_133 = 1;
 	score(x_133, result);
-	printScoreCompare(result, length, y_133);
+	printScoreCSV(result, length, y_133);
 	delay(time);
 
 	double x_134[] = {-0.209564, 3.571872, 10.256971, 0.159246, -0.084921, -0.111374};
 	int y_134 = 1;
 	score(x_134, result);
-	printScoreCompare(result, length, y_134);
+	printScoreCSV(result, length, y_134);
 	delay(time);
 
 	double x_135[] = {-0.486039, 1.745071, 9.522298, -0.187543, -0.144632, 0.074731};
 	int y_135 = 1;
 	score(x_135, result);
-	printScoreCompare(result, length, y_135);
+	printScoreCSV(result, length, y_135);
 	delay(time);
 
 	double x_136[] = {-0.074994, 4.258345, 10.304122, -0.034359, -0.051959, -0.227386};
 	int y_136 = 1;
 	score(x_136, result);
-	printScoreCompare(result, length, y_136);
+	printScoreCSV(result, length, y_136);
 	delay(time);
 
 	double x_137[] = {0.798889, 2.949616, 11.051967, -0.005338, -0.669185, -0.064439};
 	int y_137 = 1;
 	score(x_137, result);
-	printScoreCompare(result, length, y_137);
+	printScoreCSV(result, length, y_137);
 	delay(time);
 
 	double x_138[] = {-0.444576, 4.285887, 12.58493, -0.614357, 0.078477, -0.471799};
 	int y_138 = 1;
 	score(x_138, result);
-	printScoreCompare(result, length, y_138);
+	printScoreCSV(result, length, y_138);
 	delay(time);
 
 	double x_139[] = {-0.959804, 1.606908, 8.613688, 0.191242, -0.418907, 0.227552};
 	int y_139 = 1;
 	score(x_139, result);
-	printScoreCompare(result, length, y_139);
+	printScoreCSV(result, length, y_139);
 	delay(time);
 
 	double x_140[] = {0.091909, 3.753295, 10.735376, -0.319526, -0.118331, 0.091547};
 	int y_140 = 1;
 	score(x_140, result);
-	printScoreCompare(result, length, y_140);
+	printScoreCSV(result, length, y_140);
 	delay(time);
 
 	double x_141[] = {0.001347, 2.551594, 10.417437, -1.079697, -0.508456, -0.417025};
 	int y_141 = 1;
 	score(x_141, result);
-	printScoreCompare(result, length, y_141);
+	printScoreCSV(result, length, y_141);
 	delay(time);
 
 	double x_142[] = {-1.093476, 4.69828, 8.90094, -0.291323, 0.145343, -0.033145};
 	int y_142 = 1;
 	score(x_142, result);
-	printScoreCompare(result, length, y_142);
+	printScoreCSV(result, length, y_142);
 	delay(time);
 
 	double x_143[] = {0.109872, 3.815715, 10.319989, 0.125664, 0.075556, 0.149551};
 	int y_143 = 1;
 	score(x_143, result);
-	printScoreCompare(result, length, y_143);
+	printScoreCSV(result, length, y_143);
 	delay(time);
 
 	double x_144[] = {0.525856, 0.813858, 7.764803, -0.144905, 0.042365, -0.104289};
 	int y_144 = 1;
 	score(x_144, result);
-	printScoreCompare(result, length, y_144);
+	printScoreCSV(result, length, y_144);
 	delay(time);
 
 	double x_145[] = {0.424218, 3.700605, 10.166259, 0.143517, -0.059872, 0.164211};
 	int y_145 = 1;
 	score(x_145, result);
-	printScoreCompare(result, length, y_145);
+	printScoreCSV(result, length, y_145);
 	delay(time);
 
 	double x_146[] = {1.96661, 1.467099, 9.789044, -0.226273, -0.203184, 0.015924};
 	int y_146 = 1;
 	score(x_146, result);
-	printScoreCompare(result, length, y_146);
+	printScoreCSV(result, length, y_146);
 	delay(time);
 
 	double x_147[] = {-0.720602, 2.956801, 7.64625, 0.158275, 0.106851, -0.269339};
 	int y_147 = 1;
 	score(x_147, result);
-	printScoreCompare(result, length, y_147);
+	printScoreCSV(result, length, y_147);
 	delay(time);
 
 	double x_148[] = {-0.436941, 2.271077, 6.727011, 0.059819, -0.055601, -0.20044};
 	int y_148 = 1;
 	score(x_148, result);
-	printScoreCompare(result, length, y_148);
+	printScoreCSV(result, length, y_148);
 	delay(time);
 
 	double x_149[] = {-0.724044, 2.049538, 9.608369, 0.152535, 0.082657, -0.244031};
 	int y_149 = 1;
 	score(x_149, result);
-	printScoreCompare(result, length, y_149);
+	printScoreCSV(result, length, y_149);
 	delay(time);
 
 	double x_150[] = {0.966241, 0.104782, 10.953622, -0.268148, -0.193186, -0.238834};
 	int y_150 = 1;
 	score(x_150, result);
-	printScoreCompare(result, length, y_150);
+	printScoreCSV(result, length, y_150);
 	delay(time);
 
 	double x_151[] = {-0.177231, 1.456172, 12.348571, 0.644894, 0.246732, 0.570602};
 	int y_151 = 1;
 	score(x_151, result);
-	printScoreCompare(result, length, y_151);
+	printScoreCSV(result, length, y_151);
 	delay(time);
 
 	double x_152[] = {0.230072, 2.291435, 6.518794, 0.301234, 0.064757, -0.086323};
 	int y_152 = 1;
 	score(x_152, result);
-	printScoreCompare(result, length, y_152);
+	printScoreCSV(result, length, y_152);
 	delay(time);
 
 	double x_153[] = {-0.86535, 1.965114, 9.50224, 0.08985, -0.523828, 0.292612};
 	int y_153 = 1;
 	score(x_153, result);
-	printScoreCompare(result, length, y_153);
+	printScoreCSV(result, length, y_153);
 	delay(time);
 
 	double x_154[] = {-0.133073, 1.280587, 7.405251, 0.01159, 0.015864, 0.086999};
 	int y_154 = 1;
 	score(x_154, result);
-	printScoreCompare(result, length, y_154);
+	printScoreCSV(result, length, y_154);
 	delay(time);
 
 	double x_155[] = {-0.044308, 2.039808, 5.854326, -0.123682, -0.025943, 0.136935};
 	int y_155 = 1;
 	score(x_155, result);
-	printScoreCompare(result, length, y_155);
+	printScoreCSV(result, length, y_155);
 	delay(time);
 
 	double x_156[] = {-0.885708, 1.357677, 7.620353, -0.076714, 0.026196, -0.519419};
 	int y_156 = 1;
 	score(x_156, result);
-	printScoreCompare(result, length, y_156);
+	printScoreCSV(result, length, y_156);
 	delay(time);
 
 	double x_157[] = {-0.505349, 2.090852, 6.937773, 0.340692, -0.235963, 0.125591};
 	int y_157 = 1;
 	score(x_157, result);
-	printScoreCompare(result, length, y_157);
+	printScoreCSV(result, length, y_157);
 	delay(time);
 
 	double x_158[] = {-0.337099, 2.221081, 11.548485, -0.433195, -0.237545, -0.033992};
 	int y_158 = 1;
 	score(x_158, result);
-	printScoreCompare(result, length, y_158);
+	printScoreCSV(result, length, y_158);
 	delay(time);
 
 	double x_159[] = {0.225581, 2.446063, 10.799892, 0.008795, -0.099212, -0.100534};
 	int y_159 = 1;
 	score(x_159, result);
-	printScoreCompare(result, length, y_159);
+	printScoreCSV(result, length, y_159);
 	delay(time);
 
 	double x_160[] = {-0.320633, 3.698359, 7.777976, -0.460826, -0.544928, -0.478999};
 	int y_160 = 1;
 	score(x_160, result);
-	printScoreCompare(result, length, y_160);
+	printScoreCSV(result, length, y_160);
 	delay(time);
 
 	double x_161[] = {1.13494, 1.162034, 13.334421, -0.034454, -0.194909, 0.245621};
 	int y_161 = 1;
 	score(x_161, result);
-	printScoreCompare(result, length, y_161);
+	printScoreCSV(result, length, y_161);
 	delay(time);
 
 	double x_162[] = {-0.249381, 2.24084, 9.086255, -0.086233, -0.195154, -0.033327};
 	int y_162 = 1;
 	score(x_162, result);
-	printScoreCompare(result, length, y_162);
+	printScoreCSV(result, length, y_162);
 	delay(time);
 
 	double x_163[] = {-0.541873, 1.914519, 10.594519, -0.023859, 0.543961, 0.043984};
 	int y_163 = 1;
 	score(x_163, result);
-	printScoreCompare(result, length, y_163);
+	printScoreCSV(result, length, y_163);
 	delay(time);
 
 	double x_164[] = {0.180525, 4.024232, 12.431499, -0.062521, -0.146271, -0.23708};
 	int y_164 = 1;
 	score(x_164, result);
-	printScoreCompare(result, length, y_164);
+	printScoreCSV(result, length, y_164);
 	delay(time);
 
 	double x_165[] = {1.444197, 1.784589, 10.467882, -0.513642, -0.473406, 0.128484};
 	int y_165 = 1;
 	score(x_165, result);
-	printScoreCompare(result, length, y_165);
+	printScoreCSV(result, length, y_165);
 	delay(time);
 
 	double x_166[] = {-0.355211, 5.781727, 9.558822, 0.240357, 0.281866, 0.271796};
 	int y_166 = 1;
 	score(x_166, result);
-	printScoreCompare(result, length, y_166);
+	printScoreCSV(result, length, y_166);
 	delay(time);
 
 	double x_167[] = {-0.330513, 2.15447, 11.83933, -0.024959, 0.375861, -0.221055};
 	int y_167 = 1;
 	score(x_167, result);
-	printScoreCompare(result, length, y_167);
+	printScoreCSV(result, length, y_167);
 	delay(time);
 
 	double x_168[] = {-0.121697, 2.03891, 7.07384, -0.161818, -0.451661, 0.073445};
 	int y_168 = 1;
 	score(x_168, result);
-	printScoreCompare(result, length, y_168);
+	printScoreCSV(result, length, y_168);
 	delay(time);
 
 	double x_169[] = {-0.012574, 2.651885, 11.593391, -0.130925, -0.158166, -0.170244};
 	int y_169 = 1;
 	score(x_169, result);
-	printScoreCompare(result, length, y_169);
+	printScoreCSV(result, length, y_169);
 	delay(time);
 
 	double x_170[] = {0.525108, 0.438887, 8.557554, -0.255519, 0.000848, 0.125558};
 	int y_170 = 1;
 	score(x_170, result);
-	printScoreCompare(result, length, y_170);
+	printScoreCSV(result, length, y_170);
 	delay(time);
 
 	double x_171[] = {0.083077, 2.891537, 11.53621, 0.254887, 0.040757, -0.042382};
 	int y_171 = 1;
 	score(x_171, result);
-	printScoreCompare(result, length, y_171);
+	printScoreCSV(result, length, y_171);
 	delay(time);
 
 	double x_172[] = {0.809666, 1.451232, 8.303084, 0.097165, 0.039494, -0.117866};
 	int y_172 = 1;
 	score(x_172, result);
-	printScoreCompare(result, length, y_172);
+	printScoreCSV(result, length, y_172);
 	delay(time);
 
 	double x_173[] = {0.184566, 1.400338, 6.472989, 0.166588, -0.041303, 0.294619};
 	int y_173 = 1;
 	score(x_173, result);
-	printScoreCompare(result, length, y_173);
+	printScoreCSV(result, length, y_173);
 	delay(time);
 
 	double x_174[] = {0.632285, 3.008594, 7.137607, -0.664199, -0.407888, 0.185775};
 	int y_174 = 1;
 	score(x_174, result);
-	printScoreCompare(result, length, y_174);
+	printScoreCSV(result, length, y_174);
 	delay(time);
 
 	double x_175[] = {-0.048948, 1.813928, 6.465655, 0.137744, 0.073293, -0.046859};
 	int y_175 = 1;
 	score(x_175, result);
-	printScoreCompare(result, length, y_175);
+	printScoreCSV(result, length, y_175);
 	delay(time);
 
 	double x_176[] = {0.889151, 1.866169, 6.79961, 0.287225, 0.002228, 0.056815};
 	int y_176 = 1;
 	score(x_176, result);
-	printScoreCompare(result, length, y_176);
+	printScoreCSV(result, length, y_176);
 	delay(time);
 
 	double x_177[] = {-0.139959, 2.502047, 7.109316, 0.096896, 0.272481, -0.193333};
 	int y_177 = 1;
 	score(x_177, result);
-	printScoreCompare(result, length, y_177);
+	printScoreCSV(result, length, y_177);
 	delay(time);
 
 	double x_178[] = {-0.382006, 3.573219, 8.017927, 0.096916, -0.207927, 0.214367};
 	int y_178 = 1;
 	score(x_178, result);
-	printScoreCompare(result, length, y_178);
+	printScoreCSV(result, length, y_178);
 	delay(time);
 
 	double x_179[] = {-0.236808, 1.905088, 6.938671, 0.117048, 0.06567, -0.153952};
 	int y_179 = 1;
 	score(x_179, result);
-	printScoreCompare(result, length, y_179);
+	printScoreCSV(result, length, y_179);
 	delay(time);
 
 	double x_180[] = {-0.377216, 3.381019, 12.138109, -0.552964, 0.049196, 0.035546};
 	int y_180 = 1;
 	score(x_180, result);
-	printScoreCompare(result, length, y_180);
+	printScoreCSV(result, length, y_180);
 	delay(time);
 
 	double x_181[] = {-0.590223, 2.450105, 6.555468, 0.100246, 0.010518, 0.118367};
 	int y_181 = 1;
 	score(x_181, result);
-	printScoreCompare(result, length, y_181);
+	printScoreCSV(result, length, y_181);
 	delay(time);
 
 	double x_182[] = {1.417552, 3.040627, 10.802436, -0.430997, 0.209085, -0.160255};
 	int y_182 = 1;
 	score(x_182, result);
-	printScoreCompare(result, length, y_182);
+	printScoreCSV(result, length, y_182);
 	delay(time);
 
 	double x_183[] = {-0.63019, 2.53902, 9.635613, -1.176862, -0.427667, -0.235534};
 	int y_183 = 1;
 	score(x_183, result);
-	printScoreCompare(result, length, y_183);
+	printScoreCSV(result, length, y_183);
 	delay(time);
 
 	double x_184[] = {-0.385149, 1.91886, 7.552095, -0.029308, 0.08433, -0.237615};
 	int y_184 = 1;
 	score(x_184, result);
-	printScoreCompare(result, length, y_184);
+	printScoreCSV(result, length, y_184);
 	delay(time);
 
 	double x_185[] = {0.040865, 2.681224, 7.070547, 0.050114, 0.026339, 0.351232};
 	int y_185 = 1;
 	score(x_185, result);
-	printScoreCompare(result, length, y_185);
+	printScoreCSV(result, length, y_185);
 	delay(time);
 
 	double x_186[] = {1.137185, 1.927841, 12.133917, -0.187926, -0.100201, -0.004579};
 	int y_186 = 1;
 	score(x_186, result);
-	printScoreCompare(result, length, y_186);
+	printScoreCSV(result, length, y_186);
 	delay(time);
 
 	double x_187[] = {-0.032183, 1.028661, 8.508606, -0.04723, -0.402242, 0.095468};
 	int y_187 = 1;
 	score(x_187, result);
-	printScoreCompare(result, length, y_187);
+	printScoreCSV(result, length, y_187);
 	delay(time);
 
 	double x_188[] = {-0.03368, 1.001268, 8.502768, -0.056409, 0.215921, 0.106232};
 	int y_188 = 1;
 	score(x_188, result);
-	printScoreCompare(result, length, y_188);
+	printScoreCSV(result, length, y_188);
 	delay(time);
 
 	double x_189[] = {0.059426, 3.143463, 8.143366, -0.174471, -0.239439, -0.174923};
 	int y_189 = 1;
 	score(x_189, result);
-	printScoreCompare(result, length, y_189);
+	printScoreCSV(result, length, y_189);
 	delay(time);
 
 	double x_190[] = {-0.601749, 1.448538, 9.751023, 0.020742, -0.268058, 0.156639};
 	int y_190 = 1;
 	score(x_190, result);
-	printScoreCompare(result, length, y_190);
+	printScoreCSV(result, length, y_190);
 	delay(time);
 
 	double x_191[] = {-0.256117, 1.296304, 11.671379, -0.024269, -0.219688, 0.204717};
 	int y_191 = 1;
 	score(x_191, result);
-	printScoreCompare(result, length, y_191);
+	printScoreCSV(result, length, y_191);
 	delay(time);
 
 	double x_192[] = {-0.285606, 2.59186, 9.299262, -0.169709, 0.14613, -0.133032};
 	int y_192 = 1;
 	score(x_192, result);
-	printScoreCompare(result, length, y_192);
+	printScoreCSV(result, length, y_192);
 	delay(time);
 
 	double x_193[] = {0.118553, 1.546434, 8.219108, 0.423271, -0.14943, 0.139957};
 	int y_193 = 1;
 	score(x_193, result);
-	printScoreCompare(result, length, y_193);
+	printScoreCSV(result, length, y_193);
 	delay(time);
 
 	double x_194[] = {1.004561, 1.710194, 7.346573, -0.148503, -0.463295, -0.102637};
 	int y_194 = 1;
 	score(x_194, result);
-	printScoreCompare(result, length, y_194);
+	printScoreCSV(result, length, y_194);
 	delay(time);
 
 	double x_195[] = {-0.085173, 1.989513, 6.856492, 0.021622, -0.130604, 0.186845};
 	int y_195 = 1;
 	score(x_195, result);
-	printScoreCompare(result, length, y_195);
+	printScoreCSV(result, length, y_195);
 	delay(time);
 
 	double x_196[] = {-0.20208, 2.66416, 6.468199, -0.075696, -0.135418, -0.049271};
 	int y_196 = 1;
 	score(x_196, result);
-	printScoreCompare(result, length, y_196);
+	printScoreCSV(result, length, y_196);
 	delay(time);
 
 	double x_197[] = {0.501158, 0.862207, 7.320976, -0.146655, 0.092726, 0.250318};
 	int y_197 = 1;
 	score(x_197, result);
-	printScoreCompare(result, length, y_197);
+	printScoreCSV(result, length, y_197);
 	delay(time);
 
 	double x_198[] = {1.620979, 2.177222, 8.901689, 1.094742, -0.307704, 0.24014};
 	int y_198 = 1;
 	score(x_198, result);
-	printScoreCompare(result, length, y_198);
+	printScoreCSV(result, length, y_198);
 	delay(time);
 
 	double x_199[] = {0.449515, 2.330953, 9.353749, -0.423191, -0.212535, -0.07097};
 	int y_199 = 1;
 	score(x_199, result);
-	printScoreCompare(result, length, y_199);
+	printScoreCSV(result, length, y_199);
 	delay(time);
 
 	double x_200[] = {0.039069, 1.805096, 7.17488, 0.246259, -0.219911, 0.099033};
 	int y_200 = 1;
 	score(x_200, result);
-	printScoreCompare(result, length, y_200);
+	printScoreCSV(result, length, y_200);
 	delay(time);
 
 	double x_201[] = {-0.530197, 2.846331, 8.318801, 0.275954, -0.5131, -0.019431};
 	int y_201 = 1;
 	score(x_201, result);
-	printScoreCompare(result, length, y_201);
+	printScoreCSV(result, length, y_201);
 	delay(time);
 
 	double x_202[] = {1.481469, 1.12985, 6.865473, 0.099977, -0.094817, 0.171015};
 	int y_202 = 1;
 	score(x_202, result);
-	printScoreCompare(result, length, y_202);
+	printScoreCSV(result, length, y_202);
 	delay(time);
 
 	double x_203[] = {0.838107, 1.564696, 11.853401, -0.262097, 0.268481, -0.036718};
 	int y_203 = 1;
 	score(x_203, result);
-	printScoreCompare(result, length, y_203);
+	printScoreCSV(result, length, y_203);
 	delay(time);
 
 	double x_204[] = {0.53394, 0.693658, 9.288035, -0.000122, -0.422242, -0.131824};
 	int y_204 = 1;
 	score(x_204, result);
-	printScoreCompare(result, length, y_204);
+	printScoreCSV(result, length, y_204);
 	delay(time);
 
 	double x_205[] = {-0.253573, 1.451382, 7.549102, -0.541451, -0.330748, 0.157874};
 	int y_205 = 1;
 	score(x_205, result);
-	printScoreCompare(result, length, y_205);
+	printScoreCSV(result, length, y_205);
 	delay(time);
 
 	double x_206[] = {-0.255818, 2.141147, 7.497908, -0.164997, 0.23818, -0.284111};
 	int y_206 = 1;
 	score(x_206, result);
-	printScoreCompare(result, length, y_206);
+	printScoreCSV(result, length, y_206);
 	delay(time);
 
 	double x_207[] = {0.775687, 1.714684, 7.818092, -0.198944, 0.052963, -0.266807};
 	int y_207 = 1;
 	score(x_207, result);
-	printScoreCompare(result, length, y_207);
+	printScoreCSV(result, length, y_207);
 	delay(time);
 
 	double x_208[] = {-0.67345, 1.31756, 10.249187, -0.054225, -0.048809, -0.084365};
 	int y_208 = 1;
 	score(x_208, result);
-	printScoreCompare(result, length, y_208);
+	printScoreCSV(result, length, y_208);
 	delay(time);
 
 	double x_209[] = {-0.557441, 1.954486, 12.278666, 0.097227, -0.159456, -0.189021};
 	int y_209 = 1;
 	score(x_209, result);
-	printScoreCompare(result, length, y_209);
+	printScoreCSV(result, length, y_209);
 	delay(time);
 
 	double x_210[] = {0.215552, 2.666255, 8.691077, -0.048754, 0.007973, -0.252802};
 	int y_210 = 1;
 	score(x_210, result);
-	printScoreCompare(result, length, y_210);
+	printScoreCSV(result, length, y_210);
 	delay(time);
 
 	double x_211[] = {0.724493, 2.598147, 10.355765, 0.028244, 0.033592, 0.043917};
 	int y_211 = 1;
 	score(x_211, result);
-	printScoreCompare(result, length, y_211);
+	printScoreCSV(result, length, y_211);
 	delay(time);
 
 	double x_212[] = {-0.410746, 0.972228, 10.154284, 0.22346, 0.221426, 0.154162};
 	int y_212 = 1;
 	score(x_212, result);
-	printScoreCompare(result, length, y_212);
+	printScoreCSV(result, length, y_212);
 	delay(time);
 
 	double x_213[] = {-0.993783, 1.162333, 10.062525, 0.115703, -0.219387, -0.247879};
 	int y_213 = 1;
 	score(x_213, result);
-	printScoreCompare(result, length, y_213);
+	printScoreCSV(result, length, y_213);
 	delay(time);
 
 	double x_214[] = {-0.956661, 2.530638, 13.038636, 0.176379, 0.527693, 0.229717};
 	int y_214 = 1;
 	score(x_214, result);
-	printScoreCompare(result, length, y_214);
+	printScoreCSV(result, length, y_214);
 	delay(time);
 
 	double x_215[] = {0.843197, 1.942511, 7.406448, -0.116036, -0.097775, -0.074061};
 	int y_215 = 1;
 	score(x_215, result);
-	printScoreCompare(result, length, y_215);
+	printScoreCSV(result, length, y_215);
 	delay(time);
 
 	double x_216[] = {-0.095651, 0.961002, 7.369325, 0.304767, -0.18683, -0.087566};
 	int y_216 = 1;
 	score(x_216, result);
-	printScoreCompare(result, length, y_216);
+	printScoreCSV(result, length, y_216);
 	delay(time);
 
 	double x_217[] = {-1.26951, 3.189717, 9.955947, -0.375339, 0.133501, -0.299546};
 	int y_217 = 1;
 	score(x_217, result);
-	printScoreCompare(result, length, y_217);
+	printScoreCSV(result, length, y_217);
 	delay(time);
 
 	double x_218[] = {-0.191602, 2.764601, 7.210206, 0.023224, -0.184489, 0.101797};
 	int y_218 = 1;
 	score(x_218, result);
-	printScoreCompare(result, length, y_218);
+	printScoreCSV(result, length, y_218);
 	delay(time);
 
 	double x_219[] = {-0.398771, 3.499872, 7.269333, 0.044423, 0.00459, 0.036121};
 	int y_219 = 1;
 	score(x_219, result);
-	printScoreCompare(result, length, y_219);
+	printScoreCSV(result, length, y_219);
 	delay(time);
 
 	double x_220[] = {0.050295, 2.701283, 10.032288, -0.143941, 0.027608, -0.222439};
 	int y_220 = 1;
 	score(x_220, result);
-	printScoreCompare(result, length, y_220);
+	printScoreCSV(result, length, y_220);
 	delay(time);
 
 	double x_221[] = {-0.561482, 2.759512, 11.606863, -0.590695, 0.250153, -0.387484};
 	int y_221 = 1;
 	score(x_221, result);
-	printScoreCompare(result, length, y_221);
+	printScoreCSV(result, length, y_221);
 	delay(time);
 
 	double x_222[] = {-1.655408, 3.952381, 12.018358, 0.229997, 0.27806, 0.018884};
 	int y_222 = 1;
 	score(x_222, result);
-	printScoreCompare(result, length, y_222);
+	printScoreCSV(result, length, y_222);
 	delay(time);
 
 	double x_223[] = {0.488434, 0.906814, 5.829627, 0.194903, 0.147355, -0.165437};
 	int y_223 = 1;
 	score(x_223, result);
-	printScoreCompare(result, length, y_223);
+	printScoreCSV(result, length, y_223);
 	delay(time);
 
 	double x_224[] = {-0.841849, 2.964136, 12.070749, 0.185022, -0.100381, 0.03875};
 	int y_224 = 1;
 	score(x_224, result);
-	printScoreCompare(result, length, y_224);
+	printScoreCSV(result, length, y_224);
 	delay(time);
 
 	double x_225[] = {0.760269, 2.319277, 8.829838, -0.29471, 0.4312, -0.392329};
 	int y_225 = 1;
 	score(x_225, result);
-	printScoreCompare(result, length, y_225);
+	printScoreCSV(result, length, y_225);
 	delay(time);
 
 	double x_226[] = {-1.021176, 0.51448, 9.895921, -0.11099, -0.008395, -0.15874};
 	int y_226 = 1;
 	score(x_226, result);
-	printScoreCompare(result, length, y_226);
+	printScoreCSV(result, length, y_226);
 	delay(time);
 
 	double x_227[] = {-1.137335, 2.823429, 8.128846, 0.013136, 0.140677, -0.066948};
 	int y_227 = 1;
 	score(x_227, result);
-	printScoreCompare(result, length, y_227);
+	printScoreCSV(result, length, y_227);
 	delay(time);
 
 	double x_228[] = {-0.176483, 4.434379, 8.624166, 0.246745, 0.131575, 0.028768};
 	int y_228 = 1;
 	score(x_228, result);
-	printScoreCompare(result, length, y_228);
+	printScoreCSV(result, length, y_228);
 	delay(time);
 
 	double x_229[] = {0.174986, 0.621508, 13.794265, 0.23235, -0.079079, 0.045635};
 	int y_229 = 1;
 	score(x_229, result);
-	printScoreCompare(result, length, y_229);
+	printScoreCSV(result, length, y_229);
 	delay(time);
 
 	double x_230[] = {-0.104632, 1.459465, 10.140064, -0.010648, -0.245668, 0.005263};
 	int y_230 = 1;
 	score(x_230, result);
-	printScoreCompare(result, length, y_230);
+	printScoreCSV(result, length, y_230);
 	delay(time);
 
 	double x_231[] = {-0.690065, 0.498463, 11.984977, 0.194698, -0.532665, 0.047412};
 	int y_231 = 1;
 	score(x_231, result);
-	printScoreCompare(result, length, y_231);
+	printScoreCSV(result, length, y_231);
 	delay(time);
 
 	double x_232[] = {0.321531, 2.402055, 7.536827, -0.073231, -0.028781, 0.128417};
 	int y_232 = 1;
 	score(x_232, result);
-	printScoreCompare(result, length, y_232);
+	printScoreCSV(result, length, y_232);
 	delay(time);
 
 	double x_233[] = {-0.027094, 2.230661, 8.243058, -0.308751, -0.377399, 0.110887};
 	int y_233 = 1;
 	score(x_233, result);
-	printScoreCompare(result, length, y_233);
+	printScoreCSV(result, length, y_233);
 	delay(time);
 
 	double x_234[] = {0.581541, 1.202749, 9.113049, 0.056824, 0.316184, -0.168466};
 	int y_234 = 1;
 	score(x_234, result);
-	printScoreCompare(result, length, y_234);
+	printScoreCSV(result, length, y_234);
 	delay(time);
 
 	double x_235[] = {-0.629591, 3.039729, 9.329649, -0.064898, -0.19656, 0.029766};
 	int y_235 = 1;
 	score(x_235, result);
-	printScoreCompare(result, length, y_235);
+	printScoreCSV(result, length, y_235);
 	delay(time);
 
 	double x_236[] = {-0.378413, 2.997517, 10.988499, 0.28736, 0.169253, 0.289548};
 	int y_236 = 1;
 	score(x_236, result);
-	printScoreCompare(result, length, y_236);
+	printScoreCSV(result, length, y_236);
 	delay(time);
 
 	double x_237[] = {-0.210762, 2.628983, 12.32043, -0.376689, -0.566231, -0.22664};
 	int y_237 = 1;
 	score(x_237, result);
-	printScoreCompare(result, length, y_237);
+	printScoreCSV(result, length, y_237);
 	delay(time);
 
 	double x_238[] = {-0.319286, 2.163601, 6.873407, 0.100367, -0.492384, 0.114596};
 	int y_238 = 1;
 	score(x_238, result);
-	printScoreCompare(result, length, y_238);
+	printScoreCSV(result, length, y_238);
 	delay(time);
 
 	double x_239[] = {0.829575, -0.035027, 11.849509, 0.131681, -0.211159, -0.355306};
 	int y_239 = 1;
 	score(x_239, result);
-	printScoreCompare(result, length, y_239);
+	printScoreCSV(result, length, y_239);
 	delay(time);
 
 	double x_240[] = {-0.924478, 3.352129, 9.33384, 0.058559, 0.019966, -0.321711};
 	int y_240 = 1;
 	score(x_240, result);
-	printScoreCompare(result, length, y_240);
+	printScoreCSV(result, length, y_240);
 	delay(time);
 
 	double x_241[] = {-0.488734, 3.643573, 10.766212, 0.0084, -0.008524, 0.024886};
 	int y_241 = 1;
 	score(x_241, result);
-	printScoreCompare(result, length, y_241);
+	printScoreCSV(result, length, y_241);
 	delay(time);
 
 	double x_242[] = {0.138013, 2.275867, 11.980786, -0.145598, 0.265217, 0.093728};
 	int y_242 = 1;
 	score(x_242, result);
-	printScoreCompare(result, length, y_242);
+	printScoreCSV(result, length, y_242);
 	delay(time);
 
 	double x_243[] = {0.674797, 1.38986, 10.065369, -0.057097, -0.410809, 0.522274};
 	int y_243 = 1;
 	score(x_243, result);
-	printScoreCompare(result, length, y_243);
+	printScoreCSV(result, length, y_243);
 	delay(time);
 
 	double x_244[] = {-0.088466, 2.17827, 8.097561, 0.726965, 0.045867, 0.281822};
 	int y_244 = 1;
 	score(x_244, result);
-	printScoreCompare(result, length, y_244);
+	printScoreCSV(result, length, y_244);
 	delay(time);
 
 	double x_245[] = {-0.148641, 2.132615, 6.795868, -0.098015, 0.247902, -0.009344};
 	int y_245 = 1;
 	score(x_245, result);
-	printScoreCompare(result, length, y_245);
+	printScoreCSV(result, length, y_245);
 	delay(time);
 
 	double x_246[] = {0.584834, 0.287253, 7.819739, 0.151994, 0.16137, 0.667033};
 	int y_246 = 1;
 	score(x_246, result);
-	printScoreCompare(result, length, y_246);
+	printScoreCSV(result, length, y_246);
 	delay(time);
 
 	double x_247[] = {-0.502206, 2.080374, 7.446864, -0.303095, 0.094491, -0.059904};
 	int y_247 = 1;
 	score(x_247, result);
-	printScoreCompare(result, length, y_247);
+	printScoreCSV(result, length, y_247);
 	delay(time);
 
 	double x_248[] = {-0.196092, 3.052153, 8.971144, 0.147877, 0.016011, -0.027399};
 	int y_248 = 1;
 	score(x_248, result);
-	printScoreCompare(result, length, y_248);
+	printScoreCSV(result, length, y_248);
 	delay(time);
 
 	double x_249[] = {0.107477, 2.303111, 8.540939, -0.015371, 0.043933, 0.366926};
 	int y_249 = 1;
 	score(x_249, result);
-	printScoreCompare(result, length, y_249);
+	printScoreCSV(result, length, y_249);
 	delay(time);
 
 }
