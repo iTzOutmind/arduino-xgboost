@@ -4742,67 +4742,64 @@ void score(double * input, double * output) {
     memcpy(output, mc, 2 * sizeof(double));
 }
 
-void printScore(double input[], int length) {
-  for(int i = 0; i < 2; i++) {
-    Serial.print("Score ");
-    Serial.print(i);
-    Serial.print(": ");
-    Serial.println(input[i]);
-  }
-}
-
-void printScoreCompare(double input[], int length, int pc) {
-  int x0 = input[0];
-  int x1 = input[1];
-  for(int i = 0; i < 2; i++) {
-    Serial.print("Inference on Arduino: ");
-    Serial.print("Score ");
-    Serial.print(i);
-    Serial.print(": ");
-    Serial.print(input[i]);
-    Serial.print("  |  ");
-  }
-  Serial.println();
-  Serial.print("Label on Arduino: ");
-  if(input[0]>input[1]){
-    Serial.print("###################");
-    Serial.print(0);
-  } else {
-    Serial.print(1);
-  }
-  Serial.print("  |  ");
-  Serial.print("Label on PC: ");
-  if(pc==0){
-    Serial.print("###################");
-  }
-  Serial.println(pc);
-  Serial.println();
-}
-
-void printScoreCSV(double input[], int length, int pc) {
-  int precision = 4;
-  
-  int x0 = input[0];
-  int x1 = input[1];
-
-  for(int i = 0; i < 2; i++) {
-    Serial.print(input[i],precision);
-    if(i==0) {
-      Serial.print(",");
+void printScore(double input[], int length) { // Format Score0: value \n Score1: value\n...
+    for(int i = 0; i < 2; i++) {
+        Serial.print("Score ");
+        Serial.print(i);
+        Serial.print(": ");
+        Serial.println(input[i]);
     }
-  }
-  Serial.println();
 }
 
-void infer() {
-	// Printing Range:
-	// Serial.println("Start: 0 | End: 250");
+void printScoreCompare(double input[], int length, int pc) { // Prints inference scores and sets label according to the larger value
+    int x0 = input[0];
+    int x1 = input[1];
+    for(int i = 0; i < 2; i++) {
+        Serial.print("Inference on Arduino: ");
+        Serial.print("Score ");
+        Serial.print(i);
+        Serial.print(": ");
+        Serial.print(input[i]);
+        Serial.print("  |  ");
+    }
+    Serial.println();
+    Serial.print("Label on Arduino: ");
+    if(input[0]>input[1]){
+        Serial.print(0);
+    } else {
+        Serial.print(1);
+    }
+    Serial.print("  |  ");
+    Serial.print("Label on PC: ");
+    Serial.println(pc);
+    Serial.println();
+}
 
-	Serial.println("aScore0,aScore1");
+void printScoreCSV(double input[], int length, int pc) { // Format: Score0, Score1\n
+    int precision = 4;
+
+    int x0 = input[0];
+    int x1 = input[1];
+
+    for(int i = 0; i < 2; i++) {
+        Serial.print(input[i],precision);
+        if(i==0) {
+        Serial.print(",");
+        }
+    }
+    Serial.println();
+}
+
+void infer(int time, int csv) { // time: delay between each inference, csv: 1 prints column-names for csv, else prints start|stop-values
+	if(csv==1){
+    Serial.println("aScore0,aScore1");        // Printing header to name columns in csv
+  } else {
+    Serial.println("Start: 0 | End: 250");    // Printing Range:
+  }
+
 	// Declarations:
 	int length = 2;
 	double result[length];
-	int time = 10;
 
 	// Model Inference
 	double x_0[] = {-0.623154, 3.131787, 11.257041, -0.736, -0.059642, 0.56997};
@@ -6307,21 +6304,10 @@ void infer() {
 
 }
 
-void setup() {
-  // LED Alive - Initialize pins as outputs
-  pinMode(LEDR, OUTPUT);
-  pinMode(LEDG, OUTPUT);
-  pinMode(LEDB, OUTPUT);
-
-  // Serial Output
-  Serial.begin(115200);
-}
-
 // Declaring Global Variables
 int color = 0;
 
-void loop() {
-    // LED Alive
+void changeColor() { // Changes status LED color on every func-call
   switch(color) {
     case 0: // GREEN
       digitalWrite(LEDR, HIGH);
@@ -6348,12 +6334,29 @@ void loop() {
       color = 0;
       break;
   }
-  
-  infer();
+}
 
-	// Looping Delay
+void repeat(int repeatTime){  // Pauses for repeatTime between program-loops - prints message as indicator for each cycle
 	Serial.println();
 	Serial.println("##### REPEATING... #####");
 	Serial.println();
-	delay(5000);
+	delay(repeatTime);
+}
+
+void setup() {
+  // LED Alive - Initialize pins as outputs
+  pinMode(LEDR, OUTPUT);
+  pinMode(LEDG, OUTPUT);
+  pinMode(LEDB, OUTPUT);
+
+  // Serial Output
+  Serial.begin(115200);
+}
+
+void loop() {
+  changeColor();
+
+  infer(10, 1);
+
+	repeat(2500);
 }
