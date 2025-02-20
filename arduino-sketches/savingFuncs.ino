@@ -31,7 +31,7 @@ void printScoreCompare(double input[], int length, int pc) { // Prints inference
     Serial.println();
 }
 
-void printScoreCSV(double input[], int length, int pc) { // Format: Score0, Score1\n
+void printScoreCSV(double input[], int length) { // Format: Score0, Score1\n
     int precision = 4;
 
     int x0 = input[0];
