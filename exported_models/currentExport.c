@@ -1,4 +1,7 @@
 #include <string.h>
+
+// aktuell zu viele Variablen für den Arduino
+
 void softmax(double *x, int size, double *result) {
     double max = x[0];
     for (int i = 1; i < size; ++i) {
