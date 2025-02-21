@@ -1,6 +1,11 @@
+// Imports
 #include <math.h>
 #include <string.h>
 
+// Declaring Global Variables
+int color = 0;
+
+// XGB-Model
 double sigmoid(double x) {
     if (x < 0.0) {
         double z = exp(x);
@@ -8,7 +13,6 @@ double sigmoid(double x) {
     }
     return 1.0 / (1.0 + exp(-x));
 }
-
 void score(double * input, double * output) {
     double var0;
     if (input[0] < -0.391436) {
@@ -4742,39 +4746,7 @@ void score(double * input, double * output) {
     memcpy(output, mc, 2 * sizeof(double));
 }
 
-void printScore(double input[], int length) { // Format Score0: value \n Score1: value\n...
-    for(int i = 0; i < 2; i++) {
-        Serial.print("Score ");
-        Serial.print(i);
-        Serial.print(": ");
-        Serial.println(input[i]);
-    }
-}
-
-void printScoreCompare(double input[], int length, int pc) { // Prints inference scores and sets label according to the larger value
-    int x0 = input[0];
-    int x1 = input[1];
-    for(int i = 0; i < 2; i++) {
-        Serial.print("Inference on Arduino: ");
-        Serial.print("Score ");
-        Serial.print(i);
-        Serial.print(": ");
-        Serial.print(input[i]);
-        Serial.print("  |  ");
-    }
-    Serial.println();
-    Serial.print("Label on Arduino: ");
-    if(input[0]>input[1]){
-        Serial.print(0);
-    } else {
-        Serial.print(1);
-    }
-    Serial.print("  |  ");
-    Serial.print("Label on PC: ");
-    Serial.println(pc);
-    Serial.println();
-}
-
+// Funcs
 void printScoreCSV(double input[], int length, int pc) { // Format: Score0, Score1\n
     int precision = 4;
 
@@ -4789,7 +4761,40 @@ void printScoreCSV(double input[], int length, int pc) { // Format: Score0, Scor
     }
     Serial.println();
 }
-
+void changeColor() { // Changes status LED color on every func-call
+  switch(color) {
+    case 0: // GREEN
+      digitalWrite(LEDR, HIGH);
+      digitalWrite(LEDG, LOW);
+      digitalWrite(LEDB, HIGH);
+      color = 1;
+      break;
+    case 1: // YELLOW
+      digitalWrite(LEDR, LOW);
+      digitalWrite(LEDG, LOW);
+      digitalWrite(LEDB, HIGH);
+      color = 2;
+      break;
+    case 2: // RED
+      digitalWrite(LEDR, LOW);
+      digitalWrite(LEDG, HIGH);
+      digitalWrite(LEDB, HIGH);
+      color = 3;
+      break;
+    case 3: // RGB OFF
+      digitalWrite(LEDR, HIGH);
+      digitalWrite(LEDG, HIGH);
+      digitalWrite(LEDB, HIGH);
+      color = 0;
+      break;
+  }
+}
+void repeat(int repeatTime){  // Pauses for repeatTime between program-loops - prints message as indicator for each cycle
+	Serial.println();
+	Serial.println("##### REPEATING... #####");
+	Serial.println();
+	delay(repeatTime);
+}
 void infer(int time, int csv) { // time: delay between each inference, csv: 1 prints column-names for csv, else prints start|stop-values
 	if(csv==1){
     Serial.println("aScore0,aScore1");        // Printing header to name columns in csv
@@ -6304,47 +6309,9 @@ void infer(int time, int csv) { // time: delay between each inference, csv: 1 pr
 
 }
 
-// Declaring Global Variables
-int color = 0;
-
-void changeColor() { // Changes status LED color on every func-call
-  switch(color) {
-    case 0: // GREEN
-      digitalWrite(LEDR, HIGH);
-      digitalWrite(LEDG, LOW);
-      digitalWrite(LEDB, HIGH);
-      color = 1;
-      break;
-    case 1: // YELLOW
-      digitalWrite(LEDR, LOW);
-      digitalWrite(LEDG, LOW);
-      digitalWrite(LEDB, HIGH);
-      color = 2;
-      break;
-    case 2: // RED
-      digitalWrite(LEDR, LOW);
-      digitalWrite(LEDG, HIGH);
-      digitalWrite(LEDB, HIGH);
-      color = 3;
-      break;
-    case 3: // RGB OFF
-      digitalWrite(LEDR, HIGH);
-      digitalWrite(LEDG, HIGH);
-      digitalWrite(LEDB, HIGH);
-      color = 0;
-      break;
-  }
-}
-
-void repeat(int repeatTime){  // Pauses for repeatTime between program-loops - prints message as indicator for each cycle
-	Serial.println();
-	Serial.println("##### REPEATING... #####");
-	Serial.println();
-	delay(repeatTime);
-}
-
+// Main
 void setup() {
-  // LED Alive - Initialize pins as outputs
+  // changeColor - Initialize pins as outputs
   pinMode(LEDR, OUTPUT);
   pinMode(LEDG, OUTPUT);
   pinMode(LEDB, OUTPUT);
@@ -6352,7 +6319,6 @@ void setup() {
   // Serial Output
   Serial.begin(115200);
 }
-
 void loop() {
   changeColor();
 

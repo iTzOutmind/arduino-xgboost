@@ -6,7 +6,6 @@
 int color = 0;
 
 // XGB-Model
-#include <string.h>
 void softmax(double *x, int size, double *result) {
     double max = x[0];
     for (int i = 1; i < size; ++i) {
@@ -19786,7 +19785,6 @@ void setup() {
   // Serial Output
   Serial.begin(115200);
 }
-
 void loop() {
   changeColor();
 
