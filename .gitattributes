@@ -1,0 +1,2 @@
+gyro_m2c.ino filter=lfs diff=lfs merge=lfs -text
+harus_m2c.ino filter=lfs diff=lfs merge=lfs -text
