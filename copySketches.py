@@ -8,9 +8,11 @@ dest = '/home/denis/arduino-xgboost/arduino_sketches'
 
 def importSketches():
     shutil.copytree(src,dest,dirs_exist_ok = True)
+    print('Copied Sketches from Windows to WSL Project Dir')
 
 def exportSketches():
     shutil.copytree(src,dest,dirs_exist_ok = True)
+    print('Copied Sketches from WSL Project Dir to Windows')
 
 # importSketches()
 # exportSketches()
