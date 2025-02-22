@@ -1,27 +1,19 @@
 import serial
 
-def readserialUnlimited(comport, baudrate):
-
-    ser = serial.Serial(comport, baudrate, timeout=0.1)         # 1/timeout is the frequency at which the port is read
-
-    while True:
-        data = ser.readline().decode().strip()
-        if data:
-            print(data)
-            if data == '##### REPEATING... #####':
-                break
-
-def readserial(comport, baudrate):
+def readserial(comport, baudrate, csv):
     ser = serial.Serial(comport, baudrate, timeout=0.1)         # 1/timeout is the frequency at which the port is read
 
     while True:
         data = ser.readline().decode().strip()
 
-        if data == '##### REPEATING... #####':
-            printData(ser)
+        if data == '##### REPEATING... #####':  # Listen for '##### REPEATING... #####'
+            if csv == True:
+                printCSV(ser)
+            else:
+                printData(ser)
             break
 
-def printData(ser):
+def printData(ser):                             # Prints every Serial Output until it reads '##### REPEATING... #####'
     data = ser.readline().decode().strip()
     while data != '##### REPEATING... #####':
         data = ser.readline().decode().strip()
@@ -29,7 +21,12 @@ def printData(ser):
         if data and data != '##### REPEATING... #####':
             print(data)
 
-def printCSV(comport, baudrate):
-    ser = serial.Serial(comport, baudrate, timeout=0.1)         # 1/timeout is the frequency at which the port is read
+def printCSV(ser):
+    with open('inoCapture.csv', 'w') as f:
+        data = ser.readline().decode().strip()
+        while data != '##### REPEATING... #####':
+            data = ser.readline().decode().strip()
 
-    
+            if data and data != '##### REPEATING... #####':
+                f.write(data + '\n')
+
