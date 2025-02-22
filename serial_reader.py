@@ -34,4 +34,4 @@ def printCSV(ser, project):
             if data and data != '##### REPEATING... #####':
                 f.write(data + '\n')
 
-readserial('/dev/ttyACM0', 115200, True, gyro)
+# readserial('/dev/ttyACM0', 115200, True, gyro)
