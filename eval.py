@@ -5,18 +5,25 @@ def printConfusionMatrix(): # Confusion Matrix
     metrics.ConfusionMatrixDisplay.from_estimator(final, xtest, ytest, cmap='Blues')
     pyplot.show()
 
-def plotLossCurves(evalResults):       # Loss Curves
-    # save evaluation results
-    # results = final.evals_result()   # Kommt in das Call-Script
-    # plot curves
-    lossValue = list(evalResults['validation_1'])[0]
-    pyplot.plot(evalResults['validation_0'][lossValue], label='train')
-    pyplot.plot(evalResults['validation_1'][lossValue], label='train')
-    # show the legend
+def plotLossCurves(model):          
+    """
+    Plot the loss curves from the model's evaluation results.
+
+    Parameters:
+    model (XGBClassifier): The model to plot the loss curves from.
+
+    Returns:
+    None
+
+    """
+    results = model.evals_result()
+    names = list(model.evals_result())
+    lossValue = list(results[names[0]])[0]
+    for i in names:
+        pyplot.plot(results[i][lossValue], label=i)
+    pyplot.ylabel(lossValue)
     pyplot.xlabel('Iterations')
-    pyplot.ylabel('Log Loss')
     pyplot.legend()
-    # show the plot
     pyplot.show()
 
 def printClassReport():     # Classification Report
