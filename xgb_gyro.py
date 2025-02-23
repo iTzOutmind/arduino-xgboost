@@ -1,9 +1,11 @@
 # Importing modules
 import copySketches
+import eval
 import pandas as pd
 import matplotlib.pyplot as pyplot
 from sklearn import metrics
 from sklearn.metrics import accuracy_score # Refactor
+import xgboost as xgb
 from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
@@ -24,29 +26,33 @@ xtrain, xtest, ytrain, ytest = train_test_split( # Split into training and test 
 
 evaldata=[(xtrain,ytrain),(xtest,ytest)]          # Datensatz zur Evaluierung
 
-# Training the donor model
-donor = XGBClassifier(              # "Spendermodell"
-    objective='binary:logistic',
-    n_estimators=10000,             # "Große Anzahl an Schaetzern, die nicht erreicht werden soll"
-    early_stopping_rounds=20,       # Anzahl an Runden, bei denen sich das Modell nicht verbessern muss, bis abgebrochen wird
-    max_depth=2,
-    learning_rate=0.1
-)
+donor = XGBClassifier()
+final = XGBClassifier()
+bestIter = None
 
-def getBestIter():
+def trainDonor():
+    global donorTrained, bestIter
+    # Training the donor model
+    donor.set_params(
+        objective='binary:logistic',
+        n_estimators=10000,             # "Große Anzahl an Schaetzern, die nicht erreicht werden soll"
+        early_stopping_rounds=20,       # Anzahl an Runden, bei denen sich das Modell nicht verbessern muss, bis abgebrochen wird
+        max_depth=2,
+        learning_rate=0.1
+    )
     donor.fit(
         xtrain, 
         ytrain, 
         eval_set=evaldata, 
         verbose=False
     )
-    return(donor.best_iteration)      # "Optimale" Anzahl an Bäumen
+    bestIter = donor.best_iteration
 
-final = XGBClassifier()
-
-def trainModel(model):
-    bestIter = getBestIter()
-
+def trainModel(model, bestIter, prints: bool = False):
+    # Set default value, if bestIter hasn't been set yet
+    if bestIter == None:
+        bestIter = 50
+    
     model.set_params(
         objective='binary:logistic',
         # tree_method = 'exact',
@@ -55,6 +61,8 @@ def trainModel(model):
         learning_rate=0.1,
         base_score=0.5
     )
+    if prints == True:
+        print(f'Model trained using {bestIter} estimators.')
 
     model.fit(xtrain, 
         ytrain, 
@@ -62,42 +70,14 @@ def trainModel(model):
         verbose=False
     )
 
-    return(bestIter)
+trainDonor()
+trainModel(final, bestIter)
 
-bestIter = trainModel(final)
-
-# Get the final models predictions
 yhat = final.predict(xtest)
 
-def printConfusionMatrix(): # Confusion Matrix
-    metrics.ConfusionMatrixDisplay.from_estimator(final, xtest, ytest, cmap='Blues')
-    pyplot.show()
+# eval.ConfusionMatrix(final, xtest, ytest)
+# eval.LossCurves(final)
+# eval.SummaryStatistics(gyro)
+# eval.ClassReport(ytest, yhat)
 
-def plotLossCurves():       # Loss Curves
-    # save evaluation results
-    results = final.evals_result()
-    # plot curves
-    lossValue = list(results['validation_1'])[0]
-    pyplot.plot(results['validation_0'][lossValue], label='train')
-    pyplot.plot(results['validation_1'][lossValue], label='train')
-    # show the legend
-    pyplot.xlabel('Iterations')
-    pyplot.ylabel('Log Loss')
-    pyplot.legend()
-    # show the plot
-    pyplot.show()
-
-def printClassReport():     # Classification Report
-    print(metrics.classification_report(ytest, yhat, digits = 3))
-
-def printMisc():            # Best Iter, Test Accuracy, Base Score, Probas,
-    # Misc
-    print(f'# Trees / Best Iteration: \t{bestIter}')
-    print(f'Test Accuracy: \t{accuracy_score(ytest, yhat)}')
-    print(f'Base_Score{final.base_score}')
-    print(f'\nPredict_Proba Return: \n{final.predict_proba(xtest)}')
-
-printConfusionMatrix()
-plotLossCurves()
-printClassReport()
-printMisc()
+print(gyro)
