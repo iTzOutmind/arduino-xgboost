@@ -3,7 +3,7 @@ import matplotlib.pyplot as pyplot
 from xgboost import XGBClassifier
 from pandas import DataFrame
 
-def ConfusionMatrix(model: XGBClassifier, xtest: DataFrame, ytest: DataFrame):
+def ConfusionMatrix(model: XGBClassifier, xtest: DataFrame, ytest: DataFrame) -> None:
     """
     Plot the confusion matrix for the given model.
 
@@ -18,7 +18,7 @@ def ConfusionMatrix(model: XGBClassifier, xtest: DataFrame, ytest: DataFrame):
     metrics.ConfusionMatrixDisplay.from_estimator(model, xtest, ytest, cmap='Blues')
     pyplot.show()
 
-def LossCurves(model: XGBClassifier):          
+def LossCurves(model: XGBClassifier) -> None:    
     """
     Plot the loss curves from the model's evaluation results.
 
@@ -39,7 +39,7 @@ def LossCurves(model: XGBClassifier):
     pyplot.legend()
     pyplot.show()
 
-def ClassReport(ytest: DataFrame, yhat, precision: int=4):
+def ClassReport(ytest: DataFrame, yhat, precision: int=4) -> None:
     """
     Print a classification report for the given true and predicted labels.
 
@@ -54,7 +54,35 @@ def ClassReport(ytest: DataFrame, yhat, precision: int=4):
     """
     print(metrics.classification_report(ytest, yhat, digits = precision))
 
-def SummaryStatistics(df: DataFrame):
+def getFeatureImportances(model: XGBClassifier, prints: bool = False) -> list:
+    """
+    Retrieve and optionally print the feature importances from the model.
+
+    Parameters:
+    model (XGBClassifier): The model from which to retrieve feature importances.
+    prints (bool): If True, prints the feature importances in descending order.
+                   Default is False.
+
+    Returns:
+    list: A list of tuples containing feature importances and their corresponding feature names, sorted by importance in descending order.
+    """
+
+    featurenames  = [str(i) for i in list(model.feature_names_in_)]
+    importances = [float(i) for i in list(model.feature_importances_)]
+
+    namedimportances = list(zip(importances, featurenames))
+
+    namedimportances = sorted(namedimportances, key=lambda x: x[0], reverse=True)
+
+    if prints == True:
+        i = 1
+        for feature in namedimportances:
+            print(f'{i}. {feature[1]}: \t{feature[0]}')
+            i += 1
+
+    return(namedimportances)
+
+def SummaryStatistics(df: DataFrame) -> None:
     """
     Prints the statistical summary for each column in the given dataframe.
     
@@ -68,7 +96,7 @@ def SummaryStatistics(df: DataFrame):
     for col in dfCols:
         print(f"Column: {col} \n{df[col].describe()} \nData Type: {df[col].dtype}\n")
 
-def printMisc(model: XGBClassifier, bestIter: int, ytest: DataFrame, yhat: DataFrame):
+def printMisc(model: XGBClassifier, bestIter: int, ytest: DataFrame, yhat: DataFrame, xtest: DataFrame) -> None:
     """
     Print miscellaneous evaluation metrics for the given model.
     Not intended for use!
