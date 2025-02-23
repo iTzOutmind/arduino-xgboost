@@ -39,6 +39,31 @@ def LossCurves(model: XGBClassifier) -> None:
     pyplot.legend()
     pyplot.show()
 
+def AUC(model: XGBClassifier, xtest: DataFrame, ytest: DataFrame) -> None:
+    # Get probability predictions
+    yhat_proba = model.predict_proba(xtest)[:, 1]
+    
+    # Get false positive rate, true positive rate and thresholds
+    fpr, tpr, thresholds = metrics.roc_curve(ytest, yhat_proba)
+    
+    print(thresholds)
+
+    # Calculate the area under the ROC curve (AUC)
+    roc_auc = metrics.auc(fpr, tpr)
+
+    # Plot the ROC Curve
+    # pyplot.figure(figsize=(8,6))
+    pyplot.plot(fpr, tpr, color='blue', label=f'ROC Curve (AUC = {roc_auc:.2f})')
+    pyplot.plot([0, 1], [0, 1], color='red', linestyle='--', label='Random Guess')
+    pyplot.xlim([0.0, 1.0])
+    pyplot.ylim([0.0, 1.05])
+    pyplot.xlabel('False Positive Rate')
+    pyplot.ylabel('True Positive Rate')
+    pyplot.title('Receiver Operating Characteristic (ROC) Curve')
+    pyplot.legend(loc="lower right")
+    pyplot.show()
+    print('Done!')
+
 def ClassReport(ytest: DataFrame, yhat, precision: int=4) -> None:
     """
     Print a classification report for the given true and predicted labels.
