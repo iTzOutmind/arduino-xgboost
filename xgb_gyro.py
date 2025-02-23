@@ -74,10 +74,3 @@ trainDonor()
 trainModel(final, bestIter)
 
 yhat = final.predict(xtest)
-
-# eval.ConfusionMatrix(final, xtest, ytest)
-# eval.LossCurves(final)
-# eval.SummaryStatistics(gyro)
-# eval.ClassReport(ytest, yhat)
-
-print(gyro)
