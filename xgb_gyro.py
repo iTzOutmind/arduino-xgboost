@@ -1,6 +1,7 @@
 # Importing modules
 import eval
-import dataToIno as dti
+import tools.serialTools as st
+import tools.captureTools as ct
 import pandas as pd
 from sklearn.metrics import accuracy_score # Refactor
 import xgboost as xgb
@@ -72,8 +73,7 @@ trainModel(final, bestIter)
 
 yhat = final.predict(xtest)
 
-xTestList = dti.genArrayList(xtest, 1, 5)
-
-# dti.sendList(xTestList)                   # Print scores without column names
-# dti.sendList(xTestList, 2)                # Print scores with column names
-# dti.sendList(xTestList, 2, datasetsPath)  # Print scores with column names and save to file
+testList = st.genArrayList(xtest, 10)
+st.sendList(testList, 2, datasetsPath)
+ct.generateBaseCapture(final, xtest, datasetsPath)
+ct.generateComparison(datasetsPath)
