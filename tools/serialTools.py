@@ -39,7 +39,7 @@ def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
         sendArray(i, csvPath)
     
     if csvPath != None:
-        print('Created successfully: ' + csvPath + 'inoCapture.csv')
+        print(f'Arduino Capture created successfully at: {csvPath}inoCapture.csv')
 
 def sendArray(array, csvPath: str):
     output = ''
