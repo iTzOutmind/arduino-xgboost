@@ -26,10 +26,10 @@ evaldata=[(xtrain,ytrain),(xtest,ytest)]          # Datensatz zur Evaluierung
 
 donor = XGBClassifier()
 final = XGBClassifier()
-bestIter = None
+bestIter = 0
 
 def trainDonor():
-    global donorTrained, bestIter
+    global bestIter
     # Training the donor model
     donor.set_params(
         objective='binary:logistic',
@@ -48,7 +48,7 @@ def trainDonor():
 
 def trainModel(model, bestIter, prints: bool = False):
     # Set default value, if bestIter hasn't been set yet
-    if bestIter == None:
+    if bestIter == 0:
         bestIter = 50
     
     model.set_params(
