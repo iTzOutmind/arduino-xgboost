@@ -2,12 +2,9 @@
 import eval
 import dataToIno as dti
 import pandas as pd
-import matplotlib.pyplot as pyplot
-from sklearn import metrics
 from sklearn.metrics import accuracy_score # Refactor
 import xgboost as xgb
 from xgboost import XGBClassifier
-from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
 
@@ -75,6 +72,8 @@ trainModel(final, bestIter)
 
 yhat = final.predict(xtest)
 
-arrayList = dti.genArrayList(xtest, 20, 5)
+xTestList = dti.genArrayList(xtest, 1, 5)
 
-dti.sendList(arrayList, datasetsPath, 2)
+# dti.sendList(xTestList)                   # Print scores without column names
+# dti.sendList(xTestList, 2)                # Print scores with column names
+# dti.sendList(xTestList, 2, datasetsPath)  # Print scores with column names and save to file
