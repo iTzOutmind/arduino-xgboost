@@ -17,6 +17,7 @@ def generateBaseCapture(model: XGBClassifier,xtest: pd.DataFrame,exportpath: str
     
     if exportpath != None:
         baseCapture.to_csv(exportpath + 'baseCapture.csv', index=False)
+        print(f'Base Capture generated successfully: {exportpath}baseCapture.csv')
     else: 
         return(baseCapture)
 
@@ -35,6 +36,7 @@ def generateComparison(path: str, returnDF: bool = False):
         return(baseCapture)
     else:
         baseCapture.to_csv(path + 'compareCaptures.csv', index=False)
+        print(f'Comparison generated successfully at: {path}compareCaptures.csv')
 
 def probaToList(probas: np.ndarray) -> list:
     amountScores = len(probas[0])
