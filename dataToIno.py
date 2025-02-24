@@ -23,7 +23,7 @@ def genArrayList(data: 'DataFrame', length: int, start: int = 0) -> list:
         arrayList.append(list(data.iloc[i]))
     return arrayList
 
-def sendList(arraylist: list, csvPath: str = None, numClasses: int = 2):
+def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
     classnames = ''
     for i in range(numClasses-1):
         classnames += ('Score_' + str(i) + ',')
@@ -32,11 +32,14 @@ def sendList(arraylist: list, csvPath: str = None, numClasses: int = 2):
     if csvPath != None:
         with open(csvPath + 'inoCapture.csv', 'w') as f:
             f.write(classnames + '\n')
+    elif numClasses != 0:
+        print(classnames)
 
     for i in arraylist:
         sendArray(i, csvPath)
     
-    print('Created successfully: ' + csvPath + 'inoCapture.csv')
+    if csvPath != None:
+        print('Created successfully: ' + csvPath + 'inoCapture.csv')
 
 def sendArray(array, csvPath: str):
     output = ''
