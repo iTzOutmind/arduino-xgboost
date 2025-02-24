@@ -89,7 +89,8 @@ trainModel(final, bestIter)
 
 yhat = final.predict(xtest)
 
+noClasses = final.n_classes_
 testList = st.genArrayList(xtest, 10)
-st.sendList(testList, 2, datasetsPath)
+st.sendList(testList, noClasses, datasetsPath)
 ct.generateBaseCapture(final, xtest, datasetsPath)
 ct.generateComparison(datasetsPath)
