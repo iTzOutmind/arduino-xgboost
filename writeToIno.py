@@ -49,5 +49,3 @@ def readSerial(comport: str, baudrate: int):
             break
             
 # writeSerial('/dev/ttyACM0', 115200)
-# writeSerial('/dev/ttyACM0', 115200, 'Yo Mama!')
-# writeSerial('/dev/ttyACM0', 115200, 'Denis ist der Beste!')
