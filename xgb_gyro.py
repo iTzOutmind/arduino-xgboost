@@ -1,6 +1,6 @@
 # Importing modules
 import eval
-import dataToIno as di
+import dataToIno as dti
 import pandas as pd
 import matplotlib.pyplot as pyplot
 from sklearn import metrics
@@ -75,6 +75,6 @@ trainModel(final, bestIter)
 
 yhat = final.predict(xtest)
 
-arrayList = di.genArrayList(xtest, 50, 5)
+arrayList = dti.genArrayList(xtest, 20, 5)
 
-di.sendList(arrayList, True, 2)
+dti.sendList(arrayList, datasetsPath, 2)
