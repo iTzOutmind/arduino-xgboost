@@ -23,50 +23,48 @@ def genArrayList(data: 'DataFrame', length: int, start: int = 0) -> list:
         arrayList.append(list(data.iloc[i]))
     return arrayList
 
-def sendList(arraylist: list, toCSV: bool = False, numClasses: int = 2):
+def sendList(arraylist: list, csvPath: str = None, numClasses: int = 2):
     classnames = ''
     for i in range(numClasses-1):
         classnames += ('Score_' + str(i) + ',')
     classnames += ('Score' + str(numClasses-1))
 
-    if toCSV:
-        with open('inoCapture.csv', 'w') as f:
+    if csvPath != None:
+        with open(csvPath + 'inoCapture.csv', 'w') as f:
             f.write(classnames + '\n')
 
     for i in arraylist:
-        sendArray(i, toCSV)
+        sendArray(i, csvPath)
+    
+    print('Created successfully: ' + csvPath + 'inoCapture.csv')
 
-def sendArray(array, toCSV: bool = False):
-    print(f'sendArray toCSV = {toCSV}')
+def sendArray(array, csvPath: str):
     output = ''
     array = [str(i) for i in array]
     [addToStr(output, i) for i in array]
     for i in array:
         output = addToStr(output, i)
-    writeSerial('/dev/ttyACM0', 115200, output, toCSV)
+    writeSerial('/dev/ttyACM0', 115200, output, csvPath)
 
 def addToStr(ziel: str, eingabe: str):
     ziel = ziel + eingabe + ' '
     return ziel
     
-def writeSerial(comport: str, baudrate: int, string: str='Hello World!', toCSV: bool = False, timeout: float=0.1):
+def writeSerial(comport: str, baudrate: int, string: str='Hello World!', csvPath: str = None, timeout: float=0.1):
     ser = serial.Serial(comport, baudrate, timeout=0.1)
-
-    print(f'writeSerial toCSV = {toCSV}')
 
     ser.write(bytes(string, 'utf-8'))
-    readSerial(comport, baudrate, toCSV)
+    readSerial(comport, baudrate, csvPath)
 
-def readSerial(comport: str, baudrate: int, toCSV: bool = False):
+def readSerial(comport: str, baudrate: int, csvPath: str = None):
     ser = serial.Serial(comport, baudrate, timeout=0.1)
-    print(f'readSerial toCSV = {toCSV}')
-    if toCSV:
-        with open('inoCapture.csv', 'a') as f:
+
+    if csvPath:
+        with open(csvPath + 'inoCapture.csv', 'a') as f:
             while True:
                 data = ser.readline().decode().strip()
                 if data:
                     f.write(data + '\n')
-                    print('Writing!')
                     break
     else:
         while True:
