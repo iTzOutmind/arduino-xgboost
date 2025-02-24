@@ -1,3 +1,6 @@
 arduino_sketches/
 exports/
 *.pyc
+baseCapture.csv
+inoCapture.csv
+compareCaptures.csv
