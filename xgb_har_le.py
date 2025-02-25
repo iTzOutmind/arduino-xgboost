@@ -103,10 +103,13 @@ yhat = final.predict(xtest)
 noClasses = final.n_classes_
 testList = st.genArrayList(xtest, 10)
 # for i in range (len(testList)):
-#     print(testList[i])
+print(testList[0])
+# st.sendArray(testList[0])
+print(testList[1])
+# st.sendArray(testList[1])
 #     st.sendArray(testList[0])
 # st.sendArray(testList[0])
-st.sendList(testList, noClasses, datasetsPath)
+# st.sendList(testList, noClasses, datasetsPath)
 # ct.generateBaseCapture(final, xtest, datasetsPath)
 # ct.generateComparison(datasetsPath)
 
