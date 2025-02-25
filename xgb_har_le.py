@@ -84,13 +84,28 @@ def trainModel(model, bestIter, prints: bool = False):
 
     print(f'Model trained using {bestIter} estimators.') if prints == True else None
     
+def portToC(model):
+    import m2cgen as m2c
+
+    with open('exports/harExport.c','w') as f:
+        code = m2c.export_to_c(model)
+        f.write(code)
+    
+    print('Model exported to: "arduino-xgboost/exports/harExport.c"')
+
 trainDonor()
 trainModel(final, bestIter)
+
+# portToC(final)
 
 yhat = final.predict(xtest)
 
 noClasses = final.n_classes_
 testList = st.genArrayList(xtest, 10)
-st.sendList(testList, noClasses, datasetsPath)
-ct.generateBaseCapture(final, xtest, datasetsPath)
-ct.generateComparison(datasetsPath)
+st.sendArray(testList[0])
+# st.sendList(testList, noClasses, datasetsPath)
+# ct.generateBaseCapture(final, xtest, datasetsPath)
+# ct.generateComparison(datasetsPath)
+
+# for i in testList:
+#     print(''.join(str(i)).replace(',',''))
