@@ -1,4 +1,6 @@
 import serial
+import time
+
 
 def genArrayList(data: 'DataFrame', length: int, start: int = 0) -> list:
     """
@@ -24,6 +26,7 @@ def genArrayList(data: 'DataFrame', length: int, start: int = 0) -> list:
     return arrayList
 
 def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
+    # Generate names for each class
     classnames = ''
     for i in range(numClasses-1):
         classnames += ('Score_' + str(i) + ',')
@@ -41,12 +44,11 @@ def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
     if csvPath != None:
         print(f'Arduino Capture created successfully at: {csvPath}inoCapture.csv')
 
-def sendArray(array, csvPath: str):
+def sendArray(array, csvPath: str = None):
     output = ''
-    array = [str(i) for i in array]
-    [addToStr(output, i) for i in array]
     for i in array:
-        output = addToStr(output, i)
+        (output.join(str(i)).replace(',',''))
+    output += ' '
     writeSerial('/dev/ttyACM0', 115200, output, csvPath)
 
 def addToStr(ziel: str, eingabe: str):
