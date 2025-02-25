@@ -1,8 +1,9 @@
 import serial
 import time
+from pandas import DataFrame
 
 
-def genArrayList(data: 'DataFrame', length: int, start: int = 0) -> list:
+def genArrayList(data: DataFrame, length: int, start: int = 0) -> list:
     """
     Generate a list of lists, where each sublist is a row from the input DataFrame.
 
@@ -40,6 +41,7 @@ def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
 
     for i in arraylist:
         sendArray(i, csvPath)
+        time.sleep(0.25)
     
     if csvPath != None:
         print(f'Arduino Capture created successfully at: {csvPath}inoCapture.csv')
@@ -47,8 +49,7 @@ def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
 def sendArray(array, csvPath: str = None):
     output = ''
     for i in array:
-        (output.join(str(i)).replace(',',''))
-    output += ' '
+        output += (str(i).replace(',','')+' ')
     writeSerial('/dev/ttyACM0', 115200, output, csvPath)
 
 def addToStr(ziel: str, eingabe: str):
@@ -63,17 +64,28 @@ def writeSerial(comport: str, baudrate: int, string: str='Hello World!', csvPath
 
 def readSerial(comport: str, baudrate: int, csvPath: str = None):
     ser = serial.Serial(comport, baudrate, timeout=0.1)
+    to_start = time.time()
 
     if csvPath:
         with open(csvPath + 'inoCapture.csv', 'a') as f:
             while True:
+                to_end = time.time()
                 data = ser.readline().decode().strip()
                 if data:
                     f.write(data + '\n')
                     break
+                
+                if to_end - to_start > 5: # Preventing inf-loops
+                    print('Timeout!')
+                    break
     else:
         while True:
+            to_end = time.time()
             data = ser.readline().decode().strip()
             if data:
                 print(data)
+                break
+            
+            if to_end - to_start > 5: # Preventing inf-loops
+                print('Timeout!')
                 break
