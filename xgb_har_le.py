@@ -4,7 +4,6 @@ import tools.serialTools as st
 import tools.captureTools as ct
 import pandas as pd
 from sklearn.metrics import accuracy_score # Refactor
-import xgboost as xgb
 from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
@@ -102,16 +101,10 @@ yhat = final.predict(xtest)
 
 noClasses = final.n_classes_
 testList = st.genArrayList(xtest, 10)
-# for i in range (len(testList)):
-print(testList[0])
-# st.sendArray(testList[0])
-print(testList[1])
-# st.sendArray(testList[1])
-#     st.sendArray(testList[0])
-# st.sendArray(testList[0])
-# st.sendList(testList, noClasses, datasetsPath)
+comport = '/dev/ttyACM0'
+baudrate = 9600
+
+# st.sendList(comport, baudrate, testList, noClasses, datasetsPath)
 # ct.generateBaseCapture(final, xtest, datasetsPath)
 # ct.generateComparison(datasetsPath)
 
-# for i in testList:
-#     print(''.join(str(i)).replace(',',''))

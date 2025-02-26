@@ -1,13 +1,11 @@
 # Importing modules
-import tools.eval
+import tools.eval as ev
 import tools.serialTools as st
 import tools.captureTools as ct
 import pandas as pd
 from sklearn.metrics import accuracy_score # Refactor
-import xgboost as xgb
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
-
 
 datasetsPath = 'datasets/gyro/' # Set location of dataset
 gyro = pd.read_csv(datasetsPath + 'gyro_mobile.csv')
@@ -73,13 +71,11 @@ trainModel(final, bestIter)
 
 yhat = final.predict(xtest)
 
-# noClasses = final.n_classes_
-# testList = st.genArrayList(xtest, 10)
+noClasses = final.n_classes_
+testList = st.genArrayList(xtest, 10)
+comport = '/dev/ttyACM0'
+baudrate = 9600
 
-# print(xtest.columns.values)
-
-# st.sendArray(testList[0])
-
-# st.sendList(testList, noClasses, datasetsPath)
+# st.sendList(comport, baudrate, testList, noClasses, datasetsPath)
 # ct.generateBaseCapture(final, xtest, datasetsPath)
 # ct.generateComparison(datasetsPath)
