@@ -1,5 +1,6 @@
 arduino_sketches/
 exports/
+__pycache__/
 *.pyc
 baseCapture.csv
 inoCapture.csv
