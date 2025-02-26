@@ -3,7 +3,6 @@ import tools.eval as ev
 import tools.serialTools as st
 import tools.captureTools as ct
 import pandas as pd
-from sklearn.metrics import accuracy_score # Refactor
 from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
