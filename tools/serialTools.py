@@ -26,8 +26,28 @@ def genArrayList(data: DataFrame, length: int, start: int = 0) -> list:
         arrayList.append(list(data.iloc[i]))
     return arrayList
 
-def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
+def sendList(comport, baudrate, arraylist: list, numClasses: int = 0, csvPath: str = None):
     # Generate names for each class
+    """
+    Send a list of lists over a serial connection to an Arduino.
+
+    Parameters
+    ----------
+    comport : str
+        The serial port to use.
+    baudrate : int
+        The baudrate to use.
+    arraylist : list
+        The list of lists to send.
+    numClasses : int, optional
+        The number of classes to generate headers for. The default is 0.
+    csvPath : str, optional
+        The path to write the CSV file to. The default is None.
+
+    Returns
+    -------
+    None
+    """
     classnames = ''
     for i in range(numClasses-1):
         classnames += ('Score_' + str(i) + ',')
@@ -36,56 +56,70 @@ def sendList(arraylist: list, numClasses: int = 0, csvPath: str = None):
     if csvPath != None:
         with open(csvPath + 'inoCapture.csv', 'w') as f:
             f.write(classnames + '\n')
+        print(f'Arduino Capture created successfully at: {csvPath}inoCapture.csv')
+    
     elif numClasses != 0:
         print(classnames)
 
     for i in arraylist:
-        sendArray(i, csvPath)
-        time.sleep(0.25)
-    
-    if csvPath != None:
-        print(f'Arduino Capture created successfully at: {csvPath}inoCapture.csv')
+        sendArray(comport, baudrate, i, csvPath)
+        
+def sendArray(comport, baudrate, array, csvPath: str = None):
+    """
+    Send a single list of values over a serial connection to an Arduino.
 
-def sendArray(array, csvPath: str = None):
-    output = ''
-    for i in array:
-        output += (str(i).replace(',','')+' ')
-    writeSerial('/dev/ttyACM0', 115200, output, csvPath)
+    Parameters
+    ----------
+    comport : str
+        The serial port to use.
+    baudrate : int
+        The baudrate to use.
+    array : array-like
+        The array of values to send.
+    csvPath : str, optional
+        The path to write the CSV file to. The default is None.
 
-def addToStr(ziel: str, eingabe: str):
-    ziel = ziel + eingabe + ' '
-    return ziel
-    
-def writeSerial(comport: str, baudrate: int, string: str='Hello World!', csvPath: str = None, timeout: float=0.1):
+    Returns
+    -------
+    None
+    """
     ser = serial.Serial(comport, baudrate, timeout=0.1)
+    for item in array:
+        message = str(item) + ' '
+        writeSerial(ser, message)
+    readSerial(ser, csvPath)
 
-    ser.write(bytes(string, 'utf-8'))
-    readSerial(comport, baudrate, csvPath)
+def writeSerial(ser, message: str):
+    ser.write(bytes(message, 'utf-8'))
 
-def readSerial(comport: str, baudrate: int, csvPath: str = None):
-    ser = serial.Serial(comport, baudrate, timeout=0.1)
-    to_start = time.time()
+def readSerial(ser, csvPath: str = None, timeout: int = 5):
+    """
+    Read data from a serial connection and print or write it to a CSV file.
 
-    if csvPath:
-        with open(csvPath + 'inoCapture.csv', 'a') as f:
-            while True:
-                to_end = time.time()
-                data = ser.readline().decode().strip()
-                if data:
+    Parameters
+    ----------
+    ser : serial.Serial
+        The serial connection to read from.
+    csvPath : str, optional
+        The path to write the CSV file to. The default is None.
+    timeout : int, optional
+        The timeout in seconds for the serial connection. The default is 5.
+
+    Returns
+    -------
+    None
+    """
+    start = time.time()
+    while True:
+        data = ser.readline().decode()
+        if data:
+            if csvPath != None:
+                with open(csvPath + 'inoCapture.csv', 'a') as f:
                     f.write(data + '\n')
-                    break
-                
-                if to_end - to_start > 5: # Preventing inf-loops
-                    print('Timeout!')
-                    break
-    else:
-        while True:
-            to_end = time.time()
-            data = ser.readline().decode().strip()
-            if data:
+            else:
                 print(data)
-                break
-            
-            if to_end - to_start > 5: # Preventing inf-loops
-                print('Timeout!')
-                break
+            break
+        end = time.time()
+        if end - start > timeout:
+            print("Timeout!")
+            break
