@@ -121,6 +121,11 @@ def SummaryStatistics(df: DataFrame) -> None:
     for col in dfCols:
         print(f"Column: {col} \n{df[col].describe()} \nData Type: {df[col].dtype}\n")
 
+def getAccuracy(ytest: DataFrame, yhat: DataFrame, verbose: bool = False) -> float:
+    if verbose == True:
+        print(f'Accuracy Score: {metrics.accuracy_score(ytest, yhat)}')
+    return(metrics.accuracy_score(ytest, yhat))
+
 def printMisc(model: XGBClassifier, bestIter: int, ytest: DataFrame, yhat: DataFrame, xtest: DataFrame) -> None:
     """
     Print miscellaneous evaluation metrics for the given model.
