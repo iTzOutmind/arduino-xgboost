@@ -18,4 +18,15 @@ Pruning kann über folgende **Paramenter** gesteuert werden
     b. Bei Klassifizierung: Benötigte Summe aus p*(1-p) mit p als Wahrscheinlichkeit, dass die Daten in diesem Knoten gesplitted werden\
     Mit p[0;1] gilt, dass p*(1-p) [0;0,25], was dazu führt, dass mindestens die **vierfache** Menge an Instanzen benötigt wird, die von dem Knoten gesehen werden, um diesen Knoten zu behalten
 3. **max_depth**\
-Kein Pruning, sondern eine Begrenzung, wie tief der Baum wachsen kann
+    Kein Pruning, sondern eine Begrenzung, wie tief der Baum wachsen kann
+
+- XGBClassifier(verbose=2) kann Infos bzgl Pruning liefern!
+
+## Log
+
+- Pruning wurde mithilfe der XGBC Parameter Gamma und min_child_weight implementiert
+- Gamma
+    1. Plots für NumNodes, NumTrees und Accuracy vs Gamma wurden erzeugt
+    2. Daten in CSV exportiert
+- min_child_weight
+    1.
