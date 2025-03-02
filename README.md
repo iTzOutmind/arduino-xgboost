@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://xgboost.ai/images/logo/xgboost-logo.png" />
+</p>
+
 # 🇩🇪 Evaluierung von XGBoost-Modellen für den Einsatz auf Arduinos
 # 🇬🇧 Evaluating XGBoost Models for Arduinos
 
