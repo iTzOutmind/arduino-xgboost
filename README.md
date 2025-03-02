@@ -9,6 +9,6 @@
   - [ ] (fast forest)
 - Optimierungen:
   - [X] Feature Selection
-  - [ ] Pruning
+  - [X] Pruning
   - [ ] Generalization
   - [ ] Hyperparameter Tuning
