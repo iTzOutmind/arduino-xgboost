@@ -10,5 +10,5 @@
 - Optimierungen:
   - [X] Feature Selection
   - [X] Pruning
-  - [ ] Generalization
+  - [ ] Quantization
   - [ ] Hyperparameter Tuning
