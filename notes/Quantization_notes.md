@@ -32,3 +32,8 @@ Compiler tries to interpret this type as a character
 - [xgb.QuantileDMatrix()](https://xgboost.readthedocs.io/en/latest/r_docs/R-package/docs/reference/xgb.DMatrix.html#details)\
 *[...] construct a DMatrix with quantization for the histogram method already applied to it, which can be used to reduce memory usage (compared to using a a regular DMatrix first and then creating a quantization out of it) when using the histogram method [...]*
 - [Various Quantization Methods](https://www.maartengrootendorst.com/blog/quantization/#part-2-introduction-to-quantization)
+
+## Notes
+
+- test_quantized.ino takes roughly 43.030 - 43.070 microseconds/43 milliseconds with 250 inputs -> Inputs and Tree_Scores have been converted to long ints
+- test_not_quantized.ino takes roughly 336.000 (!) microseconds / milliseconds with 250 inputs -> No imputs have been quantized at all

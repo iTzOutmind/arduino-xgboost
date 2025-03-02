@@ -1,9 +1,9 @@
 # Schmierzettel
 
 - [X] Micro-Modell nehmen
-- [ ] Anzahl an Inferenzen timen
-- [ ] Händisch quantisieren (naiv)
-- [ ] quant-Modell timen
+- [X] Anzahl an Inferenzen timen
+- [X] Händisch quantisieren (naiv)
+- [X] quant-Modell timen
 - [ ] ggfs stärker quantisieren (naiv)
 - [ ] ggfs wieder timen
 
