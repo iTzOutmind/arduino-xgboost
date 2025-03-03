@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 
 def generateBaseCapture(model: XGBClassifier,xtest: pd.DataFrame,exportpath: str = None):
+    print('Generating Base Model Predictions...')
     probanda = model.predict_proba(xtest).tolist()
     listOfScores = probaToList(probanda)
     scoreNames = []
@@ -15,8 +16,10 @@ def generateBaseCapture(model: XGBClassifier,xtest: pd.DataFrame,exportpath: str
     for i in range(len(listOfScores)):
         baseCapture[scoreNames[i]] = listOfScores[i]
     
+    baseCapture['label'] = model.predict(xtest)
+
     if exportpath != None:
-        baseCapture.to_csv(exportpath + 'baseCapture.csv', index=False)
+        baseCapture.to_csv(exportpath + 'baseCapture.csv', index=False, sep=';')
         print(f'Base Capture generated successfully at: {exportpath}baseCapture.csv')
     else: 
         return(baseCapture)
