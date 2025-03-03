@@ -36,4 +36,9 @@ Compiler tries to interpret this type as a character
 ## Notes
 
 - test_quantized.ino takes roughly 43.030 - 43.070 microseconds/43 milliseconds with 250 inputs -> Inputs and Tree_Scores have been converted to long ints
-- test_not_quantized.ino takes roughly 336.000 (!) microseconds / milliseconds with 250 inputs -> No imputs have been quantized at all
+- test_not_quantized.ino  with Datatype **DOUBLE** takes roughly 336.000 (!) microseconds / milliseconds with 250 inputs -> No imputs have been quantized at all 
+- test_not_quantized.ino with **FLOAT** values takes roughly 235 millis/231700 micros per cycle
+- Arduino Nano 33 BLE seems to support Double Precision
+  - **Unterstützt auf jeden Fall Double!**
+- Float hat 24 Nachkommastellen auf Arduino
+- Double hat 52 Nachkommastellen
