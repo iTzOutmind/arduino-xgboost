@@ -11,4 +11,6 @@
 - [XGBoost Implementation on IRIS dataset (Python)](https://www.kaggle.com/code/kevalm/xgboost-implementation-on-iris-dataset-python)
 - [XGBoost Parameters Doc](https://xgboost.readthedocs.io/en/stable/parameter.html#parameters-for-categorical-feature)
 - [Tips to control your XGBoost model](https://www.capitalone.com/tech/machine-learning/how-to-control-your-xgboost-model/)
-- [Paper - XGBoost: A Scalable Tree Boosting System](https://arxiv.org/pdf/1603.02754)
+- Paper: [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/pdf/1603.02754)
+- Paper: [Optimizing TinyML: The Impact of Reduced Data Acquisition Rates for Time Series Classification on Microcontrollers](https://arxiv.org/html/2409.10942v1)
+- Forum: [How to dump XGBoost model to cpp file](https://root-forum.cern.ch/t/how-to-dump-xgboost-model-to-cpp-file/59198)
