@@ -7,3 +7,5 @@ inoCapture.csv
 compareCaptures.csv
 quicksave*
 figures/
+quantize/scores/naive*
+
