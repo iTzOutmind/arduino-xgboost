@@ -8,4 +8,4 @@ compareCaptures.csv
 quicksave*
 figures/
 quantize/scores/naive*
-
+quantize/generated/
