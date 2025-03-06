@@ -3,6 +3,7 @@ import pandas as pd
 from xgboost import XGBClassifier
 
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score 
 
 from tools import serialTools, captureTools, eval
 
@@ -117,11 +118,12 @@ def trainModel(model: XGBClassifier, feats: pd.DataFrame, labels: pd.DataFrame, 
 
 def main():
     importData()
-    print(xtest)
-    # model = XGBClassifier()
-    # evalset = [(xtrain,ytrain),(xtest,ytest)]
-    # trainModel(model, xtrain, xtest, True, evalset)
-    # trainModel(model, xtrain, ytrain)
+    print(xtrain)
+    model = XGBClassifier()
+    evalset = [(xtrain,ytrain),(xtest,ytest)]
+    trainModel(model, xtrain, ytrain, True, evalset)
+    trainModel(model, xtrain, ytrain)
+    print(accuracy_score(ytest,model.predict(xtest)))
     # print(model.feature_importances_)
 
 if __name__ == '__main__':
