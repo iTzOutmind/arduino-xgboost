@@ -5,7 +5,9 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score 
 
-from tools import serialTools, captureTools, eval
+import time
+
+# from tools import serialTools, captureTools, eval
 
 datasetsPath = 'datasets/harus/'
 
@@ -86,14 +88,18 @@ bestIter = 0
 def trainModel(model: XGBClassifier, feats: pd.DataFrame, labels: pd.DataFrame, setBestIter: bool = False, evalset: list = None):
     global bestIter
     
+    model.set_params(
+        objective='multi:softmax',
+        tree_method = 'exact',
+        num_class=6,
+        learning_rate=0.1,
+        max_depth=3
+    )
+
     if setBestIter == True:
         model.set_params(
-            objective='multi:softmax',
-            num_class=6,
-            learning_rate=0.1,
             n_estimators=10000,
             early_stopping_rounds=100,
-            max_depth=3
         )
         model.fit(
             feats, labels,
@@ -103,12 +109,8 @@ def trainModel(model: XGBClassifier, feats: pd.DataFrame, labels: pd.DataFrame, 
         bestIter = model.best_iteration
     else:
         model.set_params(
-            objective='multi:softmax',
-            num_class=6,
-            learning_rate=0.1,
             n_estimators=bestIter,
             early_stopping_rounds=None,
-            max_depth=3
         )
         model.fit(feats,labels)
 
@@ -118,13 +120,14 @@ def trainModel(model: XGBClassifier, feats: pd.DataFrame, labels: pd.DataFrame, 
 
 def main():
     importData()
-    print(xtrain)
     model = XGBClassifier()
     evalset = [(xtrain,ytrain),(xtest,ytest)]
     trainModel(model, xtrain, ytrain, True, evalset)
-    trainModel(model, xtrain, ytrain)
+    # trainModel(model, xtrain, ytrain)
+
+    print(xtrain)
     print(accuracy_score(ytest,model.predict(xtest)))
-    # print(model.feature_importances_)
+    print(model.feature_importances_)
 
 if __name__ == '__main__':
     main()
