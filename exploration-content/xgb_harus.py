@@ -129,5 +129,20 @@ def main():
     print(accuracy_score(ytest,model.predict(xtest)))
     print(model.feature_importances_)
 
+def exportDatatoCSV():
+    importData()
+    xdata = pd.concat([xtrain, xtest])
+    xdata.to_csv("harus_xdata.csv", index=False, sep=";")
+    ydata = pd.concat([ytrain, ytest])
+    ydata.to_csv("harus_ydata.csv", index=False, sep=";")
+
+
+def dataShape():
+    importData()
+    print(xtrain.shape)
+    print(xtest.shape)
+
 if __name__ == '__main__':
-    main()
+    # main()
+    # exportDatatoCSV()
+    dataShape()
