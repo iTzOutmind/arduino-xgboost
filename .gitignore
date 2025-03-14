@@ -9,3 +9,5 @@ quicksave*
 figures/
 quantize/scores
 quantize/generated/
+clf_iter.json
+clf_iter.ubjson
