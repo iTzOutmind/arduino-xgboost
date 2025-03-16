@@ -11,3 +11,4 @@ quantize/scores
 quantize/generated/
 clf_iter.json
 clf_iter.ubjson
+clf_iter.ubj
