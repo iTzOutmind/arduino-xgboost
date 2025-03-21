@@ -13,3 +13,4 @@ quantize/generated/
 *.json
 *.ino
 *.c
+*.c:Zone.Identifier
