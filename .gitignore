@@ -14,3 +14,6 @@ quantize/generated/
 *.ino
 *.c
 *.c:Zone.Identifier
+datasets/gyro/gyrotests.txt
+datasets/harus/testinputs.txt
+datasets/mushroom/mushroomtests.txt
