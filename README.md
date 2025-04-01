@@ -15,16 +15,14 @@ Ein Projektrepo für die Bachelorarbeit: "Evaluierung von XGBoost-Modellen für 
   - [X] Feature Selection: 0 Thres, Iter und RFE
   - [x] Hyperparameter & Pruning
   - [x] Quantization
-- [ ] Basismodelle
-  - [ ] Modelle trainiert
-  - [ ] Modellgenauigkeit
-  - [ ] Inferenzgeschwindigkeit
-  - [ ] ROM/Flash
-  - [ ] RAM
-- [ ] Portierung
-  - [ ] m2cgen
-  - [ ] everythingml
-  - [ ] ...
+- [x] Basismodelle
+  - [x] Modelle trainiert
+  - [x] Modellgenauigkeit
+  - [x] Inferenzgeschwindigkeit
+  - [x] ROM/Flash
+  - [x] RAM
+- [x] Portierung
+  - [x] m2cgen
 
 ## Inseratsbeschreibung von wi.uni-muemster-de
 - In-depth understanding of gradient-boosting decision trees and the features of the XGBoost Framework
