@@ -12,8 +12,13 @@ import csv
 
 # input_csv_filename = 'datasets/agmp/feature_selection/semu_xtest_emb.csv'
 # output_txt_filename = 'datasets/agmp/feature_selection/semu_xtest_emb_test.txt'
-input_csv_filename = 'datasets/agmp/feature_selection/semu_xtest_rfecv.csv'
-output_txt_filename = 'datasets/agmp/feature_selection/semu_xtest_rfecv_test.txt'
+# input_csv_filename = 'datasets/agmp/feature_selection/semu_xtest_rfecv.csv'
+# output_txt_filename = 'datasets/agmp/feature_selection/semu_xtest_rfecv_test.txt'
+
+# input_csv_filename = 'datasets/harus/feature_selection/harus_xtest_emb.csv'
+# output_txt_filename = 'datasets/harus/feature_selection/harus_xtest_emb_test.txt'
+input_csv_filename = 'datasets/harus/feature_selection/harus_xtest_rfecv.csv'
+output_txt_filename = 'datasets/harus/feature_selection/harus_xtest_rfecv_test.txt'
 
 # CSV-Datei einlesen
 with open(input_csv_filename, mode='r') as csv_file:
