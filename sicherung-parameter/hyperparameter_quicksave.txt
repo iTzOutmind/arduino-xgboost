@@ -1,0 +1,31 @@
+Gefundene Hyperparameter:
+
+##### Agmp #####
+max_depth:          5 
+n_estimators:       400
+learning_rate:      0.2682893147260598 
+colsample_bytree:   0.761287213218212
+gamma:              0.6064496054554777 
+min_child_weight:   7 
+subsample:          0.7826079565050621
+nach best_iteration:48
+
+##### Harus #####
+colsample_bytree:   0.8582280977824015
+gamma:              0.12828994860439275
+learning_rate:      0.13481670745733776
+max_depth:          3
+min_child_weight:   1
+n_estimators:       1000
+subsample:          0.6575317462724224
+nach best_iteration:249
+
+##### Semu #####
+colsample_bytree:   0.63998340623714
+gamma:              0.13172036479303575
+learning_rate:      0.15027487381296678
+max_depth:          5
+min_child_weight:   3
+n_estimators:       500
+subsample:          0.7599248560037323
+nach best_iteration:499
